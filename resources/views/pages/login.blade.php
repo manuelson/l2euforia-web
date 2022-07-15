@@ -22,7 +22,7 @@
                 <div class="tabs-content">
                     <div>
                         <div class="donation_result_mess"></div>
-                        <form name="pg_frm" name="form" method="post" action="/post-login" >
+                        <form name="pg_frm" name="form" method="post" action="/" >
                             <div class="form-donate">
                                 <div class="text-input big">
                                     <input name="l2account" id="Users_login" type="text" class="account_field" data-platform="paygol" type="text" maxlength="16">
