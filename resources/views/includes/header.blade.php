@@ -9,14 +9,14 @@
                 <li><a href='/donate.html'>Donaciones</a></li>
                 <li><a href="/">Contacto</a></li>
                 <li class="show-smartphone"><a href="/">Login</a></li>
-                <li class="show-smartphone"><a href="/">Registro</a></li>
+                <li class="show-smartphone"><a href="/registro">Registro</a></li>
             </ul>
         </nav>
     </div>
     <div class='hide-smartphone'>
         <div>
             <ul class="topmenu">
-                <li><a href="/">Login</a> | <a>Registro</a></li>
+                <li><a href="/">Login</a> | <a href="/registro">Registro</a></li>
             </ul>
         </div>
     </div>

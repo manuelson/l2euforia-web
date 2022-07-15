@@ -24,7 +24,7 @@
                </p>
            </div>
            <div class="credits" style="padding-top:40px">
-               <span class="autor">Author: <span>Manu</span></div>
+               <div class="autor">Author: <span>Manu</span></div>
                <div class="date">15/Julio/2022</div>
            </div>
        </div>
