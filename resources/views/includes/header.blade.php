@@ -8,7 +8,7 @@
                 <li><a href="#startgame">Foro</a></li>
                 <li><a href='/donate.html'>Donaciones</a></li>
                 <li><a href="/">Contacto</a></li>
-                <li class="show-smartphone"><a href="/">Login</a></li>
+                <li class="show-smartphone"><a href="/login">Login</a></li>
                 <li class="show-smartphone"><a href="/registro">Registro</a></li>
             </ul>
         </nav>
@@ -16,7 +16,7 @@
     <div class='hide-smartphone'>
         <div>
             <ul class="topmenu">
-                <li><a href="/">Login</a> | <a href="/registro">Registro</a></li>
+                <li><a href="/login">Login</a> | <a href="/registro">Registro</a></li>
             </ul>
         </div>
     </div>

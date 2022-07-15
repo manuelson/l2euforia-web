@@ -7,10 +7,7 @@
         <header>
             @include('includes.header')
         </header>
-        @include('includes.banner')
-
         @yield('content')
-
         <footer class="row">
             @include('includes.footer')
         </footer>
