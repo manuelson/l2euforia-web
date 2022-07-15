@@ -10,7 +10,7 @@
     </span>
         <h2 class="wow fadeInUp" data-wow-delay="0s">Noticias</h2>
     </div>
-    <div class='wrapper'>
+    <div class='wrapper' style="height:500px">
         <div class="discord" style="float:left">
             <iframe class="hide-smartphone" src="https://discord.com/widget?id=993161440070479953&theme=dark" width="250" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>

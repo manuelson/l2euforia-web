@@ -6145,7 +6145,6 @@ footer .rights{
         display:none
     }
     #home .video{
-        background:url(../img/bg_home.jpg) top center no-repeat;
         background-size:cover
     }
     #home .video video{
