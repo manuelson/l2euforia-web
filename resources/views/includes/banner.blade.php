@@ -40,7 +40,7 @@
                 </li>
                 <li class='wow fadeInUp longer' data-wow-delay='1.1s'>
                     <img src='img/ic_timeline2.svg' alt=''>
-                    <span>No pay2win</span>
+                    <span>Buffers low level</span>
                 </li>
                 <li class='wow fadeInUp longer' data-wow-delay='1.4s'>
                     <img src='img/ic_timeline3.svg' alt=''>
