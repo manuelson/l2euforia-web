@@ -5774,7 +5774,7 @@ footer .nav a{
     cursor:pointer
 }
 footer .rights{
-    margin-top:30px;
+    margin-top:10px;
     color:rgba(255,255,255,.4)
 }
 @media(max-width:1024px){
