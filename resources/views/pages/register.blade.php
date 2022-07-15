@@ -1,3 +1,6 @@
+@extends('layouts.default')
+
+@section('content')
 
 <section class="section3">
     <div class="cloud-top"></div>
@@ -54,3 +57,5 @@
         </div>
     </div>
 </section>
+
+@endsection;

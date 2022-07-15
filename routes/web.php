@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('registration', [AuthController::class, 'registration'])->name('register');
+Route::get('registro', [AuthController::class, 'registration'])->name('register');
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
 
