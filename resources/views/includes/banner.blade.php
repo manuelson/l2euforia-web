@@ -29,8 +29,8 @@
             </p>
         </div>
         <div class="buttons">
-            <a href="#startgame" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>&nbsp;&nbsp; Juega ahora! &nbsp;&nbsp;</a>
-            <!--a href="/" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>Читать описание</a-->
+            <a href="/registro" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>&nbsp;&nbsp; Regístrate ahora! &nbsp;&nbsp;</a>
+            o <a href="/" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>Descarga el juego</a>
         </div><br><br><br><br><br><br>
         <div class='timeline'>
             <ul>
