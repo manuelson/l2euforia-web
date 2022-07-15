@@ -8,25 +8,18 @@
                 <li><a href="#startgame">Foro</a></li>
                 <li><a href='/donate.html'>Donaciones</a></li>
                 <li><a href="/">Contacto</a></li>
-                <div class="show-smartphone">
-                    <br><br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; <a href="/"><img src="img/ru.png" alt="" width="89" height="34" /></a>
-                    &nbsp; &nbsp; &nbsp;<a href="/"><img src="img/en.png" alt="" width="89" height="34" /></a>
-                </div>
+                <li class="show-smartphone"><a href="/">Login</a></li>
+                <li class="show-smartphone"><a href="/">Registro</a></li>
             </ul>
         </nav>
     </div>
-    <!--div class='hide-smartphone'>
-        <div class="blok">
+    <div class='hide-smartphone'>
+        <div>
             <ul class="topmenu">
-                <li><a href="/"><img src="img/ru.png" alt="" width="89" height="34" /></a>
-                    <ul class="submenu">
-                        <li><a href="/"><img src="img/en.png" alt="" width="89" height="34" /></a>
-                    </ul>
-                </li>
+                <li><a href="/">Login</a> | <a>Registro</a></li>
             </ul>
         </div>
-    </div-->
+    </div>
     <div class="menu-mobile">
         <span></span>
     </div>

@@ -1,6 +1,8 @@
 @extends('layouts.default')
-@section('home')
+
+@section('content')
 <section id="home">
+
 <div class='wrapper'>
     <div class='text'>
         <img class="wow fadeInUp" src="img/img_frames_divider.svg" alt="">
@@ -42,59 +44,35 @@
 </div>
 </section>
 
-<section class="section3">
-    <div class="cloud-top"></div>
-    <div class="cloud-bottom"></div>
-    <img class="char wow fadeInRight" src="img/img_knight.png" alt="" data-wow-delay="0.4s">
+
+
+<section class="news">
     <div class="section-header">
-<span class="wow headerload" data-wow-delay="1s">
-<img class="wow fadeIn" data-wow-delay='1.5s' src="img/ic_titles1.svg" alt="">
-</span>
-        <h2 class="wow fadeInUp" data-wow-delay="0s">Registrate!</h2>
-        <p class="wow fadeInUp" data-wow-delay="0.2s">Recomendaciones de instalación. Descargue un cliente limpio de Lineage 2 desde el siguiente enlace, luego instale nuestro parche con reemplazo de archivo. ¡No se recomienda utilizar clientes de otros servidores!</p>
+    <span class="wow headerload" data-wow-delay="1s">
+        <img class="wow fadeIn" data-wow-delay='1.5s' src="img/ic_titles1.svg" alt="">
+    </span>
+        <h2 class="wow fadeInUp" data-wow-delay="0s">Noticias</h2>
     </div>
     <div class='wrapper'>
-        <div class="donate wow fadeIn" data-wow-delay="0.8s">
-            <div>
-                <ul class="tabs">
-                    <a class='button-alt small uppercase'>Juego + parche</a>
+        <!-- Start new --->
+        <div class="new">
+           <h2 class="title">Bienvenidos a L2Euforia!!</h2>
+           <div class="content">
+               <p class="text">
+                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's s
+                   tandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                   <br/><br/>
+                   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with des
+                   ktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+               </p>
+           </div>
+           <div class="credits" style="padding-top:40px">
+               <span class="autor">Author: <span>Manu</span></div>
+               <div class="date">15/Julio/2022</div>
+           </div>
+       </div>
+    <!-- end new --->
 
-                </ul>
-                <div class="tabs-content">
-                    <div>
-                        <div class="donation_result_mess"></div>
-                        <form name="pg_frm" name="form" method="post" action="" >
-                            <div class="form-donate">
-                                <div class="text-input big">
-                                    <input name="l2account" id="Users_login" type="text" class="account_field" data-platform="paygol" type="text" maxlength="16">
-                                    <label for="">Nickname</label>
-                                </div>
-                                <div class="text-input big">
-                                    <input name="l2email" class="account_field" data-platform="paygol" type="text" maxlength="60">
-                                    <label for="">Email</label>
-                                </div>
-                            </div>
-                            <div class="form-donate">
-                                <div class="text-input big">
-                                    <input name="l2password1"  id="Users_password"  type="password" class="account_field" data-platform="paygol" type="text" maxlength="16">
-                                    <label for="">password</label>
-                                </div>
-                                <div class="text-input big">
-                                    <input name="l2password2" type="password" class="account_field" data-platform="paygol" type="text" maxlength="16">
-                                    <label for="">Repetir password</label>
-                                </div></div>
-                            <br>
-                            <div class="forminputgroup formcaptchareg">
-                                <div class="g-recaptcha" data-theme="dark" data-sitekey="6Ld8Xb0dAAAAAPWdZbVuDNzbSmQZidHafhVHCNzk"></div>
-                                <div class="groupinputerror formcaptchaerror"></div>
-                            </div><br>
-                            <div>
-                                <button name="register" class='button-alt small uppercase'>Enviar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
+

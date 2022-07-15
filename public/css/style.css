@@ -4719,6 +4719,33 @@ header .button,header .button-alt,header .button-outline{
 .map-sidebar-links ul li img{
     width:100%
 }
+
+.wrapper .new {
+    margin: auto;
+    max-width: 600px;
+    padding: 10px;
+    padding-bottom:40px;
+}
+
+.wrapper .new .title {
+    color:#e4c571;
+}
+
+.wrapper .new .date {
+    float:right;
+    color:#e4c571;
+}
+
+.wrapper .new .autor {
+    float:left;
+}
+
+.wrapper .new .autor span {
+    color:#e4c571;
+}
+
+
+
 #home{
     position:relative;
     left:0;
