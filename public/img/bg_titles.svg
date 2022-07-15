@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="95" height="98" viewBox="0 0 95 98">
+  <g id="bg_titles" transform="translate(-913 -1116)">
+    <g id="bg_titles-2" data-name="bg_titles" transform="translate(0 36)" opacity="0.09">
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="47.5" cy="47.5" r="47.5" transform="translate(913 1080)" fill="#fff"/>
+      <rect id="Rectangle_65" data-name="Rectangle 65" width="1" height="120" transform="translate(1002.853 1085) rotate(45)" fill="#fff"/>
+      <rect id="Rectangle_66" data-name="Rectangle 66" width="1" height="120" transform="translate(1003.56 1169.853) rotate(135)" fill="#fff"/>
+      <path id="Polygon_9" data-name="Polygon 9" d="M5.5,0,11,5H0Z" transform="translate(966 1178) rotate(180)" fill="#fff"/>
+    </g>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="46.5" cy="46.5" r="46.5" transform="translate(914 1117)" fill="#14171c"/>
+  </g>
+</svg>
