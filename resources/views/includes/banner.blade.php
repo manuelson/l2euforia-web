@@ -17,7 +17,7 @@
         <p class="wow fadeInUp" style="margin-bottom:20px" data-wow-delay='1.1s'>
             <strong>SP:</strong> x8
             <strong>Exp:</strong> x8
-            <strong>Drop:</strong> x8
+            <strong>Drop:</strong> x5
         </p>
         <div class='text'>
             <img class="wow fadeInUp" src="img/img_frames_divider.svg" alt="">
@@ -48,7 +48,7 @@
                 </li>
                 <li class='wow fadeInUp longer' data-wow-delay='1.7s'>
                     <img src='img/ic_timeline4.svg' alt=''>
-                    <span>Olimpiadas semanales</span>
+                    <span>Olimpiadas diarias</span>
                 </li>
             </ul>
         </div>
