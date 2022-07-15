@@ -1,10 +1,10 @@
 
 <div class="wrapper">
     <div>
-        <a><span style="font-size:22px"><strong>L2EUFORIA</strong></span></a>
+        <a href="/"><span style="font-size:22px"><strong>L2EUFORIA</strong></span></a>
         <nav>
             <ul>
-                <li><a class="menu" href='#home'>Inicio</a></li>
+                <li><a class="menu" href='/'>Inicio</a></li>
                 <li><a href="#startgame">Foro</a></li>
                 <li><a href='/donate.html'>Donaciones</a></li>
                 <li><a href="/">Contacto</a></li>
