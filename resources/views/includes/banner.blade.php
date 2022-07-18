@@ -48,7 +48,7 @@
             <ul>
                 <li class='wow fadeInUp longer' data-wow-delay='0.8s'>
                     <img src='img/ic_timeline1.svg' alt=''>
-                    <span>Eventos especiales</span>
+                    <span>Solo 1 mochila por usuario</span>
                 </li>
                 <li class='wow fadeInUp longer' data-wow-delay='1.1s'>
                     <img src='img/ic_timeline2.svg' alt=''>
@@ -56,11 +56,11 @@
                 </li>
                 <li class='wow fadeInUp longer' data-wow-delay='1.4s'>
                     <img src='img/ic_timeline3.svg' alt=''>
-                    <span>Asedios semanales</span>
+                    <span>Sin ventajas para los que donan</span>
                 </li>
                 <li class='wow fadeInUp longer' data-wow-delay='1.7s'>
                     <img src='img/ic_timeline4.svg' alt=''>
-                    <span>Olimpiadas diarias</span>
+                    <span>Sistema anti trampas</span>
                 </li>
             </ul>
         </div>
