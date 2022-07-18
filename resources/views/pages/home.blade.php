@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('includes.banner')
+@include('includes.banner')
 
 <section class="news">
     <div class="section-header">
