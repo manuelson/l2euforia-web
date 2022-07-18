@@ -128,10 +128,10 @@ class AuthController extends Controller
 
             return redirect()->back()->with('success', $success);
         } catch (\Exception $e) {
-            if ($e->validator->fails()) {
-                return redirect()->back()->withErrors($e->validator);
-            }
-            $e->getMessage();
+
+            return redirect()->back()->withErrors($e->getMessage());
+
+            
         }
     }
 
