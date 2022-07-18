@@ -4823,11 +4823,11 @@ header .button,header .button-alt,header .button-outline{
     margin:0 14px;
     min-width:200px
 }
-#home .wrapper .timeline{
-}
+
 #home .wrapper .timeline ul{
     display:flex;
-    flex-direction:row
+    flex-direction:row;
+    margin-top:50px;
 }
 #home .wrapper .timeline ul li{
     display:inline-flex;
@@ -6119,7 +6119,7 @@ footer .rights{
         margin-bottom:10px
     }
     #home .wrapper .timeline{
-        margin-top:30px
+        margin-bottom:200px
     }
     #home .wrapper .timeline ul{
         flex-wrap:wrap;

@@ -43,7 +43,7 @@
         <div class="buttons">
             <a href="/registro" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>&nbsp;&nbsp; Regístrate ahora! &nbsp;&nbsp;</a>
             o <a href="/" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>Descarga el juego</a>
-        </div><br><br><br><br><br><br>
+        </div>
         <div class='timeline'>
             <ul>
                 <li class='wow fadeInUp longer' data-wow-delay='0.8s'>
