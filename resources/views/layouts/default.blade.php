@@ -8,7 +8,6 @@
             @include('includes.header')
         </header>
         @include('includes.banner')
-
         @yield('content')
 
         <footer class="row">

@@ -142,9 +142,21 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'l2account' => [
+            'required' => 'Se requiere un id de usuario.',
         ],
+        'l2email' => 'Debes poner un email valido.',
+        'l2email' => [
+            'required' => 'Se requiere un email.',
+        ],
+        'l2account' => [
+            'required' => 'Se requiere un id de usuario.',
+        ],
+        'l2password1' =>  [
+            'min' => 'Debe tener minimo 6 caracteres la contraseña.',
+            'required' => 'Se requiere de una contraseña.',
+            'same' => 'No concuerda la confirmación de contraseña.'
+        ]
     ],
 
     /*

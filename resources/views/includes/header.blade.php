@@ -1,4 +1,3 @@
-
 <div class="wrapper">
     <div>
         <a href="/"><span style="font-size:22px"><strong>L2EUFORIA</strong></span></a>

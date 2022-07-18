@@ -1,7 +1,6 @@
 @extends('layouts.default')
 
 @section('content')
-
 <section class="section3">
     <div class="cloud-top"></div>
     <div class="cloud-bottom"></div>
@@ -22,7 +21,8 @@
                 <div class="tabs-content">
                     <div>
                         <div class="donation_result_mess"></div>
-                        <form name="pg_frm" name="form" method="post" action="" >
+                        <form name="pg_frm" name="form" method="POST" action="post-registration" >
+                            {{ csrf_field() }}
                             <div class="form-donate">
                                 <div class="text-input big">
                                     <input name="l2account" id="Users_login" type="text" class="account_field" data-platform="paygol" type="text" maxlength="16">
@@ -48,7 +48,7 @@
                                 <div class="groupinputerror formcaptchaerror"></div>
                             </div><br>
                             <div>
-                                <button name="register" class='button-alt small uppercase'>Enviar</button>
+                                <button name="register" type="submit" class='button-alt small uppercase'>Enviar</button>
                             </div>
                         </form>
                     </div>
