@@ -18,6 +18,11 @@
     line-height:initial;
     color:rgba(255,255,255,.2)
 }
+
+.footer {
+    display:block;
+    clear: both;
+}
 .slider .slider-pages li{
     -webkit-touch-callout:none;
     -webkit-user-select:none;
@@ -169,7 +174,6 @@ img{
 }
 .wrapper{
     width:100%;
-    max-width:1280px;
     padding:0 40px;
     margin:0 auto
 }
@@ -5367,10 +5371,9 @@ header .button,header .button-alt,header .button-outline{
     opacity:0
 }
 .section3{
-    position:relative;
     background:#14171c url(../img/bg_section3.jpg) center 200px no-repeat;
     background-size:cover;
-    overflow:hidden
+    margin-top: 70px;
 }
 .section3 .cloud-top{
     top:200px;
