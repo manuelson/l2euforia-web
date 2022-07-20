@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.default', ['title' => 'Registro'])
 
 @section('content')
 <section class="section3">

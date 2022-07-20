@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.default', ['title' => 'Donaciones'])
 
 @section('content')
     <section class="donate">
