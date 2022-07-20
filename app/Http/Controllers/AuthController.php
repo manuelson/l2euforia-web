@@ -9,9 +9,25 @@ use Session;
 use App\Models\User;
 use Hash;
 use GuzzleHttp\Client;
+use App\Http\Service\SendForgotpasswordEmail;
+use Illuminate\Support\Facades\Password;
 
 class AuthController extends Controller
 {
+    /**
+     * @var SendForgotpasswordEmail
+     */
+    private $sendForgotpasswordEmail;
+
+    /**
+     * @param SendForgotpasswordEmail $sendForgotpasswordEmail
+     */
+    public function __construct(
+        SendForgotpasswordEmail $sendForgotpasswordEmail
+    ) {
+        $this->sendForgotpasswordEmail = $sendForgotpasswordEmail;
+    }
+
     /**
      * Write code on Method
      *
@@ -32,6 +48,11 @@ class AuthController extends Controller
         return view('pages.register');
     }
 
+    public function forgotpassword()
+    {
+        return view('pages.forgotpassword');
+
+    }
 
     /**
      * Write code on Method
@@ -62,6 +83,137 @@ class AuthController extends Controller
         }
 
         return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|void
+     */
+    public function postForgotpassword(Request $request)
+    {
+        try {
+            $this->validate(
+                $request,
+                ['email' => 'required|email']
+            );
+
+            $data = $request->all();
+
+            $client = new Client([
+                'base_uri' => env('API_URL'),
+                'headers' => ['Content-Type' => 'application/json'],
+                'http_errors' => false
+            ]);
+
+            $response = $client->post('/api/exist-user', ['body' => json_encode([
+                'email' => $data['email'],
+            ])]);
+
+            $statusCode = $response->getStatusCode();
+            $respuestaJson = json_decode($response->getBody());
+
+            switch ($statusCode) {
+                case 200:
+                    if ((bool)$respuestaJson->message == false) {
+                        return redirect()->back()->withErrors('El email no existe');
+                    }
+
+                    $this->sendForgotpasswordEmail->send($data['email'], $respuestaJson->message->fp_token);
+                    break;
+                case 500:
+                    $success = 'Ha habido un problema con el registro, intentelo de nuevo mas tarde o contacte con un administrador.';
+                    break;
+            }
+
+            return redirect()->back()->with('success');
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors($e->getMessage());
+        }
+    }
+
+    public function recoveryPassword(Request $request)
+    {
+
+        try {
+            $this->validate(
+                $request,
+                [
+                    'tokenId' => 'required'
+                ]
+            );
+
+            $client = new Client([
+                'base_uri' => env('API_URL'),
+                'headers' => ['Content-Type' => 'application/json'],
+                'http_errors' => false
+            ]);
+
+            $response = $client->post('/api/fg-check-token', ['body' => json_encode([
+                'token' => $request->tokenId
+            ])]);
+
+            $statusCode = $response->getStatusCode();
+            $respuestaJson = json_decode($response->getBody());
+
+            switch ($statusCode) {
+                case 200:
+                    echo "OK";
+                    if ((bool)$respuestaJson->error == true) {
+                        throw new \Exception();
+                    }
+                    return view('pages.recoverypassword');
+                    break;
+                case 500:
+                    throw new \Exception();
+                    break;
+            }
+
+        } catch (\Exception $e) {
+            return redirect('forgotpassword')->withErrors('El link ha expirado');
+        }
+
+    }
+
+    public function postRecoveryPassword(Request $request)
+    {
+        $this->validate(
+            $request,
+            [
+                'password' => 'required|min:6|required_with:l2password2|same:repeatpassword',
+                'repeatpassword' => '',
+                'tokenId' => 'required'
+            ]
+        );
+
+        $client = new Client([
+            'base_uri' => env('API_URL'),
+            'headers' => ['Content-Type' => 'application/json'],
+            'http_errors' => false
+        ]);
+
+        $response = $client->post('/api/fg-change-password', ['body' => json_encode([
+            'token' => $request->tokenId,
+            'password' => $request->password,
+        ])]);
+
+        $statusCode = $response->getStatusCode();
+        $respuestaJson = json_decode($response->getBody());
+
+        switch ($statusCode) {
+            case 200:
+                echo "OK";
+                if ((bool)$respuestaJson->error == true) {
+                    return redirect('forgotpassword')->withErrors($respuestaJson->message);
+                }
+                $success = 'Se ha cambiado la contraseña correctamente.';
+                break;
+            case 500:
+                echo "OK2";
+                $success = 'Ha habido un problema con el registro, intentelo de nuevo mas tarde o contacte con un administrador.';
+                break;
+        }
+
+        return redirect('login')->with('success', $success);
     }
 
     /**

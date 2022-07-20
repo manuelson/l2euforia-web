@@ -20,6 +20,13 @@ Route::get('/', function () {
 
 Route::get('registro', [AuthController::class, 'registration'])->name('register');
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
+Route::get('test', [\App\Http\Controllers\TestController::class, 'test'])->name('test.test');
+
+Route::get('forgotpassword', [AuthController::class, 'forgotpassword'])->name('forgotpassword');
+Route::post('post-forgotpassword', [AuthController::class, 'postForgotpassword'])->name('forgotpassword.post');
+
+Route::get('recoveryPassword', [AuthController::class, 'recoveryPassword'])->name('recovery.post');
+Route::post('post-recoverypassword', [AuthController::class, 'postRecoveryPassword'])->name('postRecoveryPassword.post');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 

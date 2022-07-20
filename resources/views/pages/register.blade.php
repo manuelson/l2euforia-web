@@ -47,7 +47,9 @@
                             <div class="forminputgroup formcaptchareg">
                                 <div class="g-recaptcha" data-theme="dark" data-sitekey="6Ld8Xb0dAAAAAPWdZbVuDNzbSmQZidHafhVHCNzk"></div>
                                 <div class="groupinputerror formcaptchaerror"></div>
-                            </div><br>
+                                <a href="/forgotpassword">Has olvidado la contraseña?</a>
+                            </div>
+
                             <div>
                                 <button name="register" type="submit" class='button-alt small uppercase'>Enviar</button>
                             </div>

@@ -21,6 +21,7 @@
                 </ul>
                 <div class="tabs-content">
                     <div>
+                        @include('includes.messages')
                         <div class="donation_result_mess"></div>
                         <form name="pg_frm" name="form" method="post" action="/" >
                             <div class="form-donate">
