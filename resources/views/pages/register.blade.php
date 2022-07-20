@@ -7,13 +7,13 @@
     <img class="char wow fadeInRight" src="img/img_knight.png" alt="" data-wow-delay="0.4s">
     <div class="section-header">
     <span class="wow headerload" data-wow-delay="1s">
-        <img class="wow fadeIn" data-wow-delay='1.5s' src="img/ic_titles1.svg" alt="">
+        <img class="wow" src="img/ic_titles1.svg" alt="">
     </span>
-        <h2 class="wow fadeInUp" data-wow-delay="0s">Registrate!</h2>
-        <p class="wow fadeInUp" data-wow-delay="0.2s">Recomendaciones de instalación. Descargue un cliente limpio de Lineage 2 desde el siguiente enlace, luego instale nuestro parche con reemplazo de archivo. ¡No se recomienda utilizar clientes de otros servidores!</p>
+        <h2>Registrate!</h2>
+        <p>Recomendaciones de instalación. Descargue un cliente limpio de Lineage 2 desde el siguiente enlace, luego instale nuestro parche con reemplazo de archivo. ¡No se recomienda utilizar clientes de otros servidores!</p>
     </div>
     <div class='wrapper'>
-        <div class="donate wow fadeIn" data-wow-delay="0.8s">
+        <div class="donate">
             <div>
                 <ul class="tabs">
                     <a class='button-alt small uppercase'>Juego + parche</a>
@@ -44,12 +44,6 @@
                                     <label for="">Repetir password</label>
                                 </div></div>
                             <br>
-                            <div class="forminputgroup formcaptchareg">
-                                <div class="g-recaptcha" data-theme="dark" data-sitekey="6Ld8Xb0dAAAAAPWdZbVuDNzbSmQZidHafhVHCNzk"></div>
-                                <div class="groupinputerror formcaptchaerror"></div>
-                                <a href="/forgotpassword">Has olvidado la contraseña?</a>
-                            </div>
-
                             <div>
                                 <button name="register" type="submit" class='button-alt small uppercase'>Enviar</button>
                             </div>

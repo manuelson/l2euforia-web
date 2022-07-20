@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="forgotpassword">
-        <h2 class="wow fadeInUp" data-wow-delay="0s">Has olvidado la contraseña?</h2>
+        <h2 class="sectionTitle">Recupera tu contraseña</h2>
     @include('includes.messages')
         <div class='wrapper' style="margin-top:80px;align-items: center;justify-content: center;display: flex;">
             <form name="forgotpassword" method="POST" action="post-recoverypassword" >

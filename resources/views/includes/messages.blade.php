@@ -1,12 +1,12 @@
 @if(session('success'))
-    <div class="alert alert-success">
-        <h3 class='uppercase color-accent text-center' style="color: #41a129">{{ session('success') }}</h3>
-    </div><br>
+    <div class="alert-messages">
+        <div class="success">{{ session('success') }}</div>
+    </div>
 @endif
 @if($errors->any())
-    <div class="alert alert-success">
-        <h3 class='uppercase color-accent text-center' style="color: #41a129">@foreach ($errors->all() as $error)
-                {{ $error }}
-            @endforeach<h3>
-    </div><br>
+    <div class="alert-messages">
+        <div class="error">@foreach ($errors->all() as $error)
+                {{ $error }}<br/>
+            @endforeach<div>
+    </div>
 @endif

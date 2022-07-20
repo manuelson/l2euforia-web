@@ -23,6 +23,39 @@
     display:block;
     clear: both;
 }
+
+section.forgotpassword {
+    margin-top:200px;
+}
+
+section.login {
+    margin-top:200px;
+}
+
+.sectionTitle {
+    text-align:center;
+}
+
+div.alert-messages {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alert-messages div.success{
+    text-effect: engrave;
+    color:#418D07;
+    font-weight: bold;
+}
+
+.alert-messages div.error{
+    text-effect: engrave;
+    color:#8D0707;
+    font-weight: bold;
+}
+
 .slider .slider-pages li{
     -webkit-touch-callout:none;
     -webkit-user-select:none;
@@ -5084,6 +5117,7 @@ header .button,header .button-alt,header .button-outline{
 .slider .slider-nav.next{
     right:-40px
 }
+
 @media not all and (pointer:coarse){
     .slider .slider-nav{
         -webkit-touch-callout:none;
