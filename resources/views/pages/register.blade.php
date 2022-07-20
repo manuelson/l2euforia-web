@@ -27,7 +27,7 @@
                             <div class="form-donate">
                                 <div class="text-input big">
                                     <input name="l2account" id="Users_login" type="text" class="account_field" data-platform="paygol" type="text" maxlength="16">
-                                    <label for="">Nickname</label>
+                                    <label for="">Username</label>
                                 </div>
                                 <div class="text-input big">
                                     <input name="l2email" class="account_field" data-platform="paygol" type="text" maxlength="60">

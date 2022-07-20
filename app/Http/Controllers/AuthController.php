@@ -68,20 +68,48 @@ class AuthController extends Controller
      *
      * @return response()
      */
+    public function logout(Request $request)
+    {
+        $request->session()->remove('authenticated');
+        return redirect("")->withSuccess('Te has deslogueado correctamente.');
+    }
+
+
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
     public function postLogin(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-                ->withSuccess('You have Successfully loggedin');
+        $client = new Client([
+            'base_uri' => env('API_URL'),
+            'headers' => ['Content-Type' => 'application/json'],
+            'http_errors' => false
+        ]);
+
+        $response = $client->post('/api/login', ['body' => json_encode([
+            'email' => $request->email,
+            'password' => $request->password
+        ])]);
+
+        $statusCode = $response->getStatusCode();
+        $respuestaJson = json_decode($response->getBody());
+
+        if ($statusCode == 200) {
+            if ((bool)$respuestaJson->error == true) {
+                return redirect()->back()->withErrors($respuestaJson->message);
+            }
+            // Authenticate there
+            $request->session()->put('authenticated', time());
         }
 
-        return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
+        return redirect("")->withSuccess('Logueado correctamente.');
     }
 
     /**
@@ -312,18 +340,5 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password'])
         ]);
-    }
-
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function logout()
-    {
-        Session::flush();
-        Auth::logout();
-
-        return Redirect('login');
     }
 }
