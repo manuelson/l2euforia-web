@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta name="description" content="">
+<meta name="description" content="Lineage2 euforia - H5 x8 server">
 <meta name="Saquib" content="Blade">
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <title>L2Euforia</title>
