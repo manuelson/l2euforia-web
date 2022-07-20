@@ -51,7 +51,6 @@ class AuthController extends Controller
     public function forgotpassword()
     {
         return view('pages.forgotpassword');
-
     }
 
     /**
@@ -125,7 +124,7 @@ class AuthController extends Controller
                     break;
             }
 
-            return redirect()->back()->with('success');
+            return redirect()->back()->with('success', 'Se ha enviado un correo electronico.');
         } catch (\Exception $e) {
             return redirect()->back()->withErrors($e->getMessage());
         }
