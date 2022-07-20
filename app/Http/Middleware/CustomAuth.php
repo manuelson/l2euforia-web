@@ -21,6 +21,6 @@ class CustomAuth
             return $next($request);
         }
 
-        return redirect('/');
+        return redirect('/login');
     }
 }

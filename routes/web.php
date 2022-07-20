@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CharacterController;
 use App\Http\Middleware\CustomAuth;
 
 /*
@@ -15,11 +16,11 @@ use App\Http\Middleware\CustomAuth;
 |
 */
 Route::group(['middleware' => ['web', CustomAuth::class]], function () {
-
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
-
+    Route::get('profile', [CharacterController::class, 'profile'])->name('profile');
 
 });
+
 Route::get('/', function () {
     return view('pages.home');
 });
@@ -35,5 +36,7 @@ Route::get('recoveryPassword', [AuthController::class, 'recoveryPassword'])->nam
 Route::post('post-recoverypassword', [AuthController::class, 'postRecoveryPassword'])->name('postRecoveryPassword.post');
 
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
+
+Route::get('donate', [CharacterController::class, 'donate'])->name('donate');
 
 

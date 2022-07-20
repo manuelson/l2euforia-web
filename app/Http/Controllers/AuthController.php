@@ -33,16 +33,6 @@ class AuthController extends Controller
      *
      * @return response()
      */
-    public function index()
-    {
-        return view('auth.login');
-    }
-
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
     public function registration()
     {
         return view('pages.register');
@@ -314,31 +304,4 @@ class AuthController extends Controller
         }
     }
 
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function dashboard()
-    {
-        if (Auth::check()) {
-            return view('dashboard');
-        }
-
-        return redirect("login")->withSuccess('Opps! You do not have access');
-    }
-
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password'])
-        ]);
-    }
 }

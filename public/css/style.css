@@ -32,6 +32,16 @@ section.login {
     margin-top:200px;
 }
 
+section.donate {
+    margin-top:200px;
+}
+
+.donateText {
+    width:70%;
+    font-size:16px;
+    font-family: 'Roboto';
+}
+
 .sectionTitle {
     text-align:center;
 }
@@ -3915,11 +3925,32 @@ u{
     letter-spacing:2px;
     color:#f2f3f6;
     border:1px solid transparent;
-    background-color:#14171c;
+    background-color: #1f252b;
     border-color:rgba(242,243,246,.2)
 }
 .text-input input.error{
     border-color:#ff3c3c
+}
+.package {
+    background-color:#1F252BFF;
+    padding:10px 10px 10px 10px;
+    width:250px;
+    margin-bottom:20px;
+    margin: 5px;
+}
+
+.packages {
+    margin-top:45px;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+
+
+}
+
+.wrappFlex {
+    margin-top:80px;align-items: center;justify-content: center;display: flex;flex-wrap: wrap
 }
 .text-input input[type=password]{
     letter-spacing:1.5px

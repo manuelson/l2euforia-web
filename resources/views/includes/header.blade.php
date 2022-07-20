@@ -5,7 +5,7 @@
             <ul>
                 <li><a class="menu" href='/'>Inicio</a></li>
                 <li><a href="#startgame">Foro</a></li>
-                <li><a href='/donate.html'>Donaciones</a></li>
+                <li><a href='/donate'>Donaciones</a></li>
                 <li><a href="/">Contacto</a></li>
                 @if(! session()->get('authenticated'))
                 <li class="show-smartphone"><a href="/login">Login</a></li>
