@@ -33,6 +33,7 @@ class Connection
                 print_r(array_merge(json_decode($response->getBody(), true), $code));
                 die();
             }
+
             return array_merge(json_decode($response->getBody(), true), $code);
 
         } catch (GuzzleException $guzzleException) {

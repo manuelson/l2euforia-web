@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 use App\Http\Middleware\CustomAuth;
 
 /*
@@ -22,23 +24,17 @@ Route::group(['middleware' => ['web', CustomAuth::class]], function () {
 
 });
 Route::get('lang/{lang}', [LanguageController::class, 'swap'])->name('lang.swap');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
-Route::get('/', function () {
-    return view('pages.home');
-});
 Route::get('login', [AuthController::class, 'login'])->name('login');
-
 Route::get('register', [AuthController::class, 'registration'])->name('register');
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
-
 Route::get('forgotpassword', [AuthController::class, 'forgotpassword'])->name('forgotpassword');
 Route::post('post-forgotpassword', [AuthController::class, 'postForgotpassword'])->name('forgotpassword.post');
-
 Route::get('recoveryPassword', [AuthController::class, 'recoveryPassword'])->name('recovery.post');
 Route::post('post-recoverypassword', [AuthController::class, 'postRecoveryPassword'])->name('postRecoveryPassword.post');
-
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
-
 Route::get('donate', [CharacterController::class, 'donate'])->name('donate');
+Route::get('news/getlist', [NewsController::class, 'getlist'])->name('news.getlist');
 
 
