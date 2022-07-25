@@ -11,6 +11,7 @@ use Hash;
 use GuzzleHttp\Client;
 use App\Http\Service\SendForgotpasswordEmail;
 use Illuminate\Support\Facades\Password;
+use App\Http\Service\Api\Connection;
 
 class AuthController extends Controller
 {
@@ -20,12 +21,20 @@ class AuthController extends Controller
     private $sendForgotpasswordEmail;
 
     /**
+     * @var Connection
+     */
+    private $connection;
+
+    /**
      * @param SendForgotpasswordEmail $sendForgotpasswordEmail
+     * @param Connection $connection
      */
     public function __construct(
-        SendForgotpasswordEmail $sendForgotpasswordEmail
+        SendForgotpasswordEmail $sendForgotpasswordEmail,
+        Connection $connection
     ) {
         $this->sendForgotpasswordEmail = $sendForgotpasswordEmail;
+        $this->connection = $connection;
     }
 
     /**
@@ -61,6 +70,9 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         $request->session()->remove('authenticated');
+        $request->session()->remove('access_token');
+        $request->session()->remove('email');
+
         return redirect("")->withSuccess('Te has deslogueado correctamente.');
     }
 
@@ -77,26 +89,22 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
 
-        $client = new Client([
-            'base_uri' => env('API_URL'),
-            'headers' => ['Content-Type' => 'application/json'],
-            'http_errors' => false
-        ]);
+        $response = $this->connection->execute(
+            'api/login',
+            [
+                'email' => $request->email,
+                'password' => $request->password
+            ]
+        );
+        if ((bool)$response['error'] === true ) {
+            return redirect()->back()->withErrors($response['message']);
+        }
 
-        $response = $client->post('/api/login', ['body' => json_encode([
-            'email' => $request->email,
-            'password' => $request->password
-        ])]);
-
-        $statusCode = $response->getStatusCode();
-        $respuestaJson = json_decode($response->getBody());
-
-        if ($statusCode == 200) {
-            if ((bool)$respuestaJson->error == true) {
-                return redirect()->back()->withErrors($respuestaJson->message);
-            }
-            // Authenticate there
+        if ((bool)$response['error'] === false ) {
+            // Authenticate successful
             $request->session()->put('authenticated', time());
+            $request->session()->put('access_token', $response['access_token']);
+            $request->session()->put('email', $request->email);
         }
 
         return redirect("")->withSuccess('Logueado correctamente.');
@@ -116,31 +124,18 @@ class AuthController extends Controller
 
             $data = $request->all();
 
-            $client = new Client([
-                'base_uri' => env('API_URL'),
-                'headers' => ['Content-Type' => 'application/json'],
-                'http_errors' => false
-            ]);
+            $response = $this->connection->execute(
+                'api/exist-user',
+                [
+                    'email' => $data['email'],
+                ]
+            );
 
-            $response = $client->post('/api/exist-user', ['body' => json_encode([
-                'email' => $data['email'],
-            ])]);
-
-            $statusCode = $response->getStatusCode();
-            $respuestaJson = json_decode($response->getBody());
-
-            switch ($statusCode) {
-                case 200:
-                    if ((bool)$respuestaJson->message == false) {
-                        return redirect()->back()->withErrors('El email no existe');
-                    }
-
-                    $this->sendForgotpasswordEmail->send($data['email'], $respuestaJson->message->fp_token);
-                    break;
-                case 500:
-                    $success = 'Ha habido un problema con el registro, intentelo de nuevo mas tarde o contacte con un administrador.';
-                    break;
+            if ((bool)$response['error'] === true ) {
+                return redirect()->back()->withErrors($response['message']);
             }
+
+            $this->sendForgotpasswordEmail->send($data['email'], $response['message']['fp_token']);
 
             return redirect()->back()->with('success', 'Se ha enviado un correo electronico.');
         } catch (\Exception $e) {
@@ -159,31 +154,16 @@ class AuthController extends Controller
                 ]
             );
 
-            $client = new Client([
-                'base_uri' => env('API_URL'),
-                'headers' => ['Content-Type' => 'application/json'],
-                'http_errors' => false
-            ]);
+            $response = $this->connection->execute(
+                'api/fg-check-token',
+                ['token' => $request->tokenId]
+            );
 
-            $response = $client->post('/api/fg-check-token', ['body' => json_encode([
-                'token' => $request->tokenId
-            ])]);
-
-            $statusCode = $response->getStatusCode();
-            $respuestaJson = json_decode($response->getBody());
-
-            switch ($statusCode) {
-                case 200:
-                    echo "OK";
-                    if ((bool)$respuestaJson->error == true) {
-                        throw new \Exception();
-                    }
-                    return view('pages.recoverypassword');
-                    break;
-                case 500:
-                    throw new \Exception();
-                    break;
+            if ((bool)$response['error'] === true ) {
+                throw new \Exception();
             }
+
+            return view('pages.recoverypassword');
 
         } catch (\Exception $e) {
             return redirect('forgotpassword')->withErrors('El link ha expirado');
@@ -202,35 +182,19 @@ class AuthController extends Controller
             ]
         );
 
-        $client = new Client([
-            'base_uri' => env('API_URL'),
-            'headers' => ['Content-Type' => 'application/json'],
-            'http_errors' => false
-        ]);
+        $response = $this->connection->execute(
+            'api/fg-change-password',
+            [
+                'token' => $request->tokenId,
+                'password' => $request->password,
+            ]
+        );
 
-        $response = $client->post('/api/fg-change-password', ['body' => json_encode([
-            'token' => $request->tokenId,
-            'password' => $request->password,
-        ])]);
-
-        $statusCode = $response->getStatusCode();
-        $respuestaJson = json_decode($response->getBody());
-
-        switch ($statusCode) {
-            case 200:
-                echo "OK";
-                if ((bool)$respuestaJson->error == true) {
-                    return redirect('forgotpassword')->withErrors($respuestaJson->message);
-                }
-                $success = 'Se ha cambiado la contraseña correctamente.';
-                break;
-            case 500:
-                echo "OK2";
-                $success = 'Ha habido un problema con el registro, intentelo de nuevo mas tarde o contacte con un administrador.';
-                break;
+        if ((bool)$response['error'] === true ) {
+            return redirect('forgotpassword')->withErrors($response['message']);
         }
 
-        return redirect('login')->with('success', $success);
+        return redirect('login')->with('success', $response['message']);
     }
 
     /**
@@ -248,59 +212,39 @@ class AuthController extends Controller
                     'l2email' => 'required|email',
                     'l2password1' => 'required|min:6|required_with:l2password2|same:l2password2',
                     'l2password2' => ''
+                ],
+                [
+                    'l2account.required' => 'El campo username es obligatorio',
+                    'l2email.required' => 'El campo email es obligatorio',
+                    'l2email.email' => 'Debes poner un email valido',
                 ]
             );
 
             $data = $request->all();
-            // $check = $this->create($data);
 
-            $client = new Client([
-                'base_uri' => env('API_URL'),
-                'headers' => ['Content-Type' => 'application/json'],
-                'http_errors' => false
-            ]);
-            $response = $client->post('/api/register', ['body' => json_encode([
-                'login' => $data['l2account'],
-                'email' => $data['l2email'],
-                'password' => $data['l2password1'],
-                'password_confirmation' => $data['l2password2']
-            ])]);
-            $statusCode = $response->getStatusCode();
-            $respuestaJson = json_decode($response->getBody());
-            $success = null;
-            switch ($statusCode) {
-                case 422:
-                    $loginRespuesta = null;
-                    $emailRespuesta = null;
-                    $passwordsRespuesta = null;
-                    if (isset($respuestaJson->login)) {
-                        $loginRespuesta = $respuestaJson->login[0];
-                    }
-                    if (isset($respuestaJson->email)) {
-                        $emailRespuesta = $respuestaJson->email[0];
-                    }
-                    if (isset($respuestaJson->password)) {
-                        foreach ($respuestaJson->password as $passwordRespuesta) {
-                            $passwordsRespuesta .= $passwordRespuesta;
-                        }
-                    }
-                    $success = $loginRespuesta . " " . $emailRespuesta . " " . $passwordsRespuesta;
-                    break;
+            $response = $this->connection->execute(
+                'api/register',
+                [
+                    'login' => $data['l2account'],
+                    'email' => $data['l2email'],
+                    'password' => $data['l2password1'],
+                    'password_confirmation' => $data['l2password2']
+                ],
+                false
+            );
 
-                case 200:
-                    $success = $respuestaJson->message;
-                    break;
-                case 500:
-                    $success = 'Ha habido un problema con el registro, intentelo de nuevo mas tarde o contacte con un administrador.';
-                    break;
+            if ((bool)$response['error'] === true ) {
+                return redirect()->back()->withErrors($response['message']);
             }
 
-            return redirect()->back()->with('success', $success);
+            return redirect()->back()->with('success', $response['message']);
+
         } catch (\Exception $e) {
             if ($e->validator->fails()) {
                 return redirect()->back()->withErrors($e->validator);
             }
-            $e->getMessage();
+            return redirect()->back()->withErrors($e->getMessage());
+
         }
     }
 

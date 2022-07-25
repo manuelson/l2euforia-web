@@ -4,12 +4,11 @@
         <nav>
             <ul>
                 <li><a class="menu" href='/'>Inicio</a></li>
-                <li><a href="#startgame">Foro</a></li>
                 <li><a href='/donate'>Donaciones</a></li>
                 <li><a href="/">Contacto</a></li>
                 @if(! session()->get('authenticated'))
                 <li class="show-smartphone"><a href="/login">Login</a></li>
-                <li class="show-smartphone"><a href="/registro">Registro</a></li>
+                <li class="show-smartphone"><a href="/register">Registro</a></li>
                 @else
                     <li class="show-smartphone"><a href="/profile">Mi perfil</a></li>
                     <li class="show-smartphone"><a href="/logout">Logout</a></li>
@@ -22,7 +21,7 @@
         <div>
             @if(! session()->get('authenticated'))
                 <ul class="topmenu">
-                    <li><a href="/login">Login</a> | <a href="/registro">Registro</a></li>
+                    <li><a href="/login">Login</a> | <a href="/register">Registro</a></li>
                 </ul>
             @else
                 <ul class="topmenu">

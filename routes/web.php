@@ -23,10 +23,10 @@ Route::group(['middleware' => ['web', CustomAuth::class]], function () {
 
 Route::get('/', function () {
     return view('pages.home');
-})->name('xDD');
+});
 Route::get('login', [AuthController::class, 'login'])->name('login');
 
-Route::get('registro', [AuthController::class, 'registration'])->name('register');
+Route::get('register', [AuthController::class, 'registration'])->name('register');
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
 
 Route::get('forgotpassword', [AuthController::class, 'forgotpassword'])->name('forgotpassword');
