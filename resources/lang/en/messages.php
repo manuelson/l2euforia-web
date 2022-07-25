@@ -8,7 +8,7 @@ return [
     'contact' => 'Contact',
     'login' => 'Login',
     'register' => 'Register',
-    'my_rofile' => 'My profile',
+    'my_profile' => 'My profile',
     'logout' => 'logout',
     'chronicle' => 'CHRONICLE HIGH FIVE X8',
     'version_chronicle' => 'The classic version of the game without modifications. No pay2win, pure enjoyment.',
