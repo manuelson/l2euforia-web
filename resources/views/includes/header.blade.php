@@ -3,7 +3,7 @@
         <a href="/"><span style="font-size:22px"><strong>L2EUFORIA</strong></span></a>
         <nav>
             <ul>
-                <li><a class="menu" href='/'><h4>{!! trans('messages.home') !!}</h4></a></li>
+                <li><a class="menu" href='/'>{!! trans('messages.home') !!}</a></li>
                 <li><a href='/donate'>{!! trans('messages.donations') !!}</a></li>
                 <li><a href="/">{!! trans('messages.contact') !!}</a></li>
                 @if(! session()->get('authenticated'))
