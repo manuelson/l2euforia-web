@@ -34,33 +34,34 @@
         <div class='text'>
             <img class="wow fadeInUp" src="img/img_frames_divider.svg" alt="">
             <h1 class='uppercase color-accent text-center wow fadeInUp' data-wow-delay='0.3s'>
-                Crónica High Five x8
+                {!! trans('messages.chronicle') !!}
             </h1>
             <p class='text-center wow fadeInUp' data-wow-delay='0.5s'>
-                La versión clásica del juego sin modificaciones. Sin pay2win, puro disfrute.
+                {!! trans('messages.version_chronicle') !!}
             </p>
         </div>
         <div class="buttons">
-            <a href="/registro" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>&nbsp;&nbsp; Regístrate ahora! &nbsp;&nbsp;</a>
-            o <a href="/" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>Descarga el juego</a>
+            <a href="/registro" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>&nbsp;&nbsp;
+                {!! trans('messages.register_now') !!}&nbsp;&nbsp;</a>
+            <a href="/" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>{!! trans('messages.download_game') !!}</a>
         </div>
         <div class='timeline'>
             <ul>
                 <li class='wow fadeInUp longer' data-wow-delay='0.8s'>
                     <img src='img/ic_timeline1.svg' alt=''>
-                    <span>Solo 1 mochila por usuario</span>
+                    <span>{!! trans('messages.icon_1') !!}</span>
                 </li>
                 <li class='wow fadeInUp longer' data-wow-delay='1.1s'>
                     <img src='img/ic_timeline2.svg' alt=''>
-                    <span>Buffers low level</span>
+                    <span>{!! trans('messages.icon_2') !!}</span>
                 </li>
                 <li class='wow fadeInUp longer' data-wow-delay='1.4s'>
                     <img src='img/ic_timeline3.svg' alt=''>
-                    <span>Sin ventajas para los que donan</span>
+                    <span>{!! trans('messages.icon_3') !!}</span>
                 </li>
                 <li class='wow fadeInUp longer' data-wow-delay='1.7s'>
                     <img src='img/ic_timeline4.svg' alt=''>
-                    <span>Sistema anti trampas</span>
+                    <span>{!! trans('messages.icon_4') !!}</span>
                 </li>
             </ul>
         </div>

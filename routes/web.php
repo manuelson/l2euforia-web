@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Middleware\CustomAuth;
 
 /*
@@ -20,6 +21,7 @@ Route::group(['middleware' => ['web', CustomAuth::class]], function () {
     Route::get('profile', [CharacterController::class, 'profile'])->name('profile');
 
 });
+Route::get('lang/{lang}', [LanguageController::class, 'swap'])->name('lang.swap');
 
 Route::get('/', function () {
     return view('pages.home');

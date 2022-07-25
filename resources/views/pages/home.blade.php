@@ -9,7 +9,7 @@
     <span class="wow headerload" data-wow-delay="1s">
         <img class="wow fadeIn" data-wow-delay='1.5s' src="img/ic_titles1.svg" alt="">
     </span>
-        <h2 class="wow fadeInUp" data-wow-delay="0s">Notícias</h2>
+        <h2 class="wow fadeInUp" data-wow-delay="0s">{!! trans('messages.news') !!}</h2>
     </div>
     <div class='wrapper' style="height:500px">
         <div class="discord" style="float:left">

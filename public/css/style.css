@@ -3931,6 +3931,10 @@ u{
 .text-input input.error{
     border-color:#ff3c3c
 }
+
+.lang {
+    width: 16px;
+}
 .package {
     background-color:#1F252BFF;
     padding:10px 10px 10px 10px;

@@ -9,14 +9,14 @@
     <span class="wow headerload" data-wow-delay="1s">
         <img class="wow" src="img/ic_titles1.svg" alt="">
     </span>
-        <h2>Registrate!</h2>
-        <p>Recomendaciones de instalación. Descargue un cliente limpio de Lineage 2 desde el siguiente enlace, luego instale nuestro parche con reemplazo de archivo. ¡No se recomienda utilizar clientes de otros servidores!</p>
+        <h2>{!! trans('messages.register_now') !!} </h2>
+        <p>{!! trans('messages.register_head') !!}</p>
     </div>
     <div class='wrapper'>
         <div class="donate">
             <div>
                 <ul class="tabs">
-                    <a class='button-alt small uppercase'>Juego + parche</a>
+                    <a class='button-alt small uppercase'>{!! trans('messages.game_patch') !!}</a>
                 </ul>
                 <div class="tabs-content">
                     <div>
@@ -27,25 +27,25 @@
                             <div class="form-donate">
                                 <div class="text-input big">
                                     <input name="l2account" id="Users_login" type="text" class="account_field" data-platform="paygol" type="text" maxlength="16">
-                                    <label for="">Username</label>
+                                    <label for="">{!! trans('messages.username') !!}</label>
                                 </div>
                                 <div class="text-input big">
                                     <input name="l2email" class="account_field" data-platform="paygol" type="text" maxlength="60">
-                                    <label for="">Email</label>
+                                    <label for="">{!! trans('messages.email') !!}</label>
                                 </div>
                             </div>
                             <div class="form-donate">
                                 <div class="text-input big">
                                     <input name="l2password1"  id="Users_password"  type="password" class="account_field" data-platform="paygol" type="text" maxlength="16">
-                                    <label for="">password</label>
+                                    <label for="">{!! trans('messages.password') !!}</label>
                                 </div>
                                 <div class="text-input big">
                                     <input name="l2password2" type="password" class="account_field" data-platform="paygol" type="text" maxlength="16">
-                                    <label for="">Repetir password</label>
+                                    <label for="">{!! trans('messages.repeat_password') !!}</label>
                                 </div></div>
                             <br>
                             <div>
-                                <button name="register" type="submit" class='button-alt small uppercase'>Enviar</button>
+                                <button name="register" type="submit" class='button-alt small uppercase'>{!! trans('messages.send') !!}</button>
                             </div>
                         </form>
                     </div>
