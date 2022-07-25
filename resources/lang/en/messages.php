@@ -47,6 +47,7 @@ return [
     'donate_3' => 'Buy tokens (5 units)',
     'donate_4' => 'Change character name',
     "donate_notfound" => 'At this time we do not have PayPal linked to the project. But if you want, you can donate to us in exchange for the rewards already described above. If so, please contact us at <strong>info@l2euforia.com</strong> with the amount you want to contribute and your reward.',
-    "footer_copyright" => 'All rights reserved'
+    "footer_copyright" => 'All rights reserved',
+    "token_gk" => 'Tokens are tradeable at an NPC for cosmetics. The NPC is located next to the GateKeeper.'
 
 ];

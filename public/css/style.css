@@ -3932,6 +3932,15 @@ u{
     border-color:#ff3c3c
 }
 
+.qtyToken {
+    background: none;
+    border: 1px solid;
+    width: 28px;
+    height: 27px;
+    padding: 5px;
+    color: white;
+}
+
 .lang {
     width: 16px;
 }

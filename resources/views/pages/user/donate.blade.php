@@ -13,21 +13,24 @@
         <div class='packages'>
 
             <div class="package">
-                {!! trans('messages.donate_1') !!} <br/><br/>
+                <strong>{!! trans('messages.donate_1') !!}</strong> <br/><br/>
+                {!! trans('messages.donate_sex') !!}<br/><br/>
                 <strong>5 €</strong>
             </div>
 
             <div class="package">
-                {!! trans('messages.donate_2') !!}  <br/><br/>
+                <strong>{!! trans('messages.donate_2') !!}</strong>  <br/><br/>
                 <strong>5 €</strong>
             </div>
             <div class="package">
-                {!! trans('messages.donate_3') !!} <br/><br/>
-                <strong>5 €</strong>
-            </div>
-            <div class="package">
-                {!! trans('messages.donate_4') !!} <br/><br/>
+                <strong>{!! trans('messages.donate_4') !!}</strong> <br/><br/>
                 <strong>10 €</strong>
+            </div>
+            <div class="package">
+                <strong>{!! trans('messages.donate_3') !!}</strong> <br/><br/>
+                {!! trans('messages.token_gk') !!}
+                <br/><br/>
+                <strong><input type="text" name="qty" class="qtyToken"/> €</strong>
             </div>
         </div>
         <div class='packages wrapper'>
