@@ -30,6 +30,11 @@
                 <strong>10 €</strong>
             </div>
         </div>
+        <div class='packages wrapper'>
+            <p>
+                {!! trans('messages.donate_notfound') !!}
+            </p>
+        </div>
     </section>
 
 @endsection;

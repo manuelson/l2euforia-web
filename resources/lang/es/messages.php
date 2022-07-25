@@ -46,6 +46,6 @@ return [
     'donate_2' => 'Cambiar lider de clan',
     'donate_3' => 'Comprar tokens (5 unds)',
     'donate_4' => 'Cambiar nombre del personaje',
-
+    "donate_notfound" => 'En estos momentos no tenemos linkado el paypal en el proyecto. Pero si quieres, nos puedes donar a cambio de las recompensas ya descritas arriba. Si es asi por favor contacta con nosotros a tra vez de <strong>info@l2euforia.com</strong> con la cantidad que quieres aportar y tu recompensa.'
 
 ];
