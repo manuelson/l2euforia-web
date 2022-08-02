@@ -11,9 +11,9 @@
 
         </div>
         <div class='packages'>
-            <a href="/file/game.rar" class='button-alt uppercase'>{!! trans('messages.download_game') !!}</a>
+            <a href="/files/game.rar" class='button-alt uppercase'>{!! trans('messages.download_game') !!}</a>
             <span style="width:20px"></span>
-            <a href="/file/patch.rar" class='button-alt uppercase'>{!! trans('messages.download_patch') !!}</a>
+            <a href="/files/patch.rar" class='button-alt uppercase'>{!! trans('messages.download_patch') !!}</a>
         </div>
 
     </section>
