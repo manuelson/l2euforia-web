@@ -11,10 +11,13 @@
 
         </div>
         <div class='packages'>
-            <a href="/files/game.rar" class='button-alt uppercase'>{!! trans('messages.download_game') !!}</a>
+            <a href="https://drive.google.com/file/d/1jLTCrfsxZyECEojccV60Iya4L_s_UGwk/view?usp=sharing" class='button-alt uppercase'>{!! trans('messages.download_game') !!}</a>
             <span style="width:20px"></span>
-            <a href="/files/patch.zip" class='button-alt uppercase'>{!! trans('messages.download_patch') !!}</a>
+            <a href="https://drive.google.com/file/d/1JxSf87GppUVswehRf4SewxNZrFqokUVf/view?usp=sharing" class='button-alt uppercase'>{!! trans('messages.download_patch') !!}</a>
         </div>
+        <br><br/>
+        <div style="text-align: center;font-size:26px"><strong>Zip password: euforia</strong></div>
+
 
     </section>
 
