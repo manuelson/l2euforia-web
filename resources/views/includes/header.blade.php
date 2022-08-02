@@ -5,8 +5,9 @@
             <ul>
                 <li><a class="menu" href='/'>{!! trans('messages.home') !!}</a></li>
                 <li><a href='/donate'>{!! trans('messages.donations') !!}</a></li>
+                <li><a href="/download">{!! trans('messages.downloads') !!}</a></li>
                 <li><a href="/">{!! trans('messages.contact') !!}</a></li>
-                @if(! session()->get('authenticated'))
+            @if(! session()->get('authenticated'))
                 <li class="show-smartphone"><a href="/login">{!! trans('messages.login') !!}</a></li>
                 <li class="show-smartphone"><a href="/register">{!! trans('messages.register') !!}</a></li>
                 @else

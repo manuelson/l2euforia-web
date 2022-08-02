@@ -16,7 +16,7 @@
         <div class="donate">
             <div>
                 <ul class="tabs">
-                    <a class='button-alt small uppercase'>{!! trans('messages.game_patch') !!}</a>
+                    <a class='button-alt small uppercase' href="/download">{!! trans('messages.game_patch') !!}</a>
                 </ul>
                 <div class="tabs-content">
                     <div>

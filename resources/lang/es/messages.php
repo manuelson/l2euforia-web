@@ -8,6 +8,7 @@ return [
     'contact' => 'Contacto',
     'login' => 'Login',
     'register' => 'Registro',
+    'downloads' => 'Descargas',
     'my_profile' => 'Mi perfil',
     'logout' => 'logout',
     'chronicle' => 'CHRONICLE HIGH FIVE X8',
