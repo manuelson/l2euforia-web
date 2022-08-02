@@ -13,7 +13,7 @@
         <div class='packages'>
             <a href="/files/game.rar" class='button-alt uppercase'>{!! trans('messages.download_game') !!}</a>
             <span style="width:20px"></span>
-            <a href="https://drive.google.com/file/d/1fhAArGt5aJ3g3VqNG-lkhFcWk8k1jrCh/view?usp=sharing" class='button-alt uppercase'>{!! trans('messages.download_patch') !!}</a>
+            <a href="https://drive.google.com/file/d/1fV3BEXvxv6V6V1pgwJpzTkNnyYZM5wBE/view?usp=sharing" class='button-alt uppercase'>{!! trans('messages.download_patch') !!}</a>
         </div>
 
     </section>
