@@ -28,6 +28,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::get('register', [AuthController::class, 'registration'])->name('register');
+Route::get('download', [AuthController::class, 'download'])->name('download');
+
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
 Route::get('forgotpassword', [AuthController::class, 'forgotpassword'])->name('forgotpassword');
 Route::post('post-forgotpassword', [AuthController::class, 'postForgotpassword'])->name('forgotpassword.post');

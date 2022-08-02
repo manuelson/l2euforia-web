@@ -48,6 +48,8 @@ return [
     'donate_4' => 'Change character name',
     "donate_notfound" => 'At this time we do not have PayPal linked to the project. But if you want, you can donate to us in exchange for the rewards already described above. If so, please contact us at <strong>info@l2euforia.com</strong> with the amount you want to contribute and your reward.',
     "footer_copyright" => 'All rights reserved',
-    "token_gk" => 'Tokens are tradeable at an NPC for cosmetics. The NPC is located next to the GateKeeper.'
-
+    "token_gk" => 'Tokens are tradeable at an NPC for cosmetics. The NPC is located next to the GateKeeper.',
+    "download_now" => "Download game and patch",
+    "download_patch" => "Download patch",
+    "download_head" => 'First download the full game on the button below. Once you have the game, download the patch with the button below. When you get the patch replace the patch system with the game system. Once replaced, run the L2.EXE file from the system folder',
 ];

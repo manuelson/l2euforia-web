@@ -42,9 +42,9 @@
             </p>
         </div>
         <div class="buttons">
-            <a href="/registro" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>&nbsp;&nbsp;
+            <a href="/register" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>&nbsp;&nbsp;
                 {!! trans('messages.register_now') !!}&nbsp;&nbsp;</a>
-            <a href="/" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>{!! trans('messages.download_game') !!}</a>
+            <a href="/download" class='button-alt uppercase wow fadeIn longer' data-wow-delay='2s'>{!! trans('messages.download_game') !!}</a>
         </div>
         <div class='timeline'>
             <ul>

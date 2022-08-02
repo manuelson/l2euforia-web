@@ -47,6 +47,16 @@ class AuthController extends Controller
         return view('pages.register');
     }
 
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function download()
+    {
+        return view('pages.download');
+    }
+
     public function forgotpassword()
     {
         return view('pages.forgotpassword');
