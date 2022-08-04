@@ -95,14 +95,14 @@ class AuthController extends Controller
     public function postLogin(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
+            'username' => 'required',
             'password' => 'required',
         ]);
 
         $response = $this->connection->execute(
             'api/login',
             [
-                'email' => $request->email,
+                'username' => $request->username,
                 'password' => $request->password
             ]
         );
@@ -114,7 +114,7 @@ class AuthController extends Controller
             // Authenticate successful
             $request->session()->put('authenticated', time());
             $request->session()->put('access_token', $response['access_token']);
-            $request->session()->put('email', $request->email);
+            $request->session()->put('username', $request->username);
         }
 
         return redirect("")->withSuccess('Logueado correctamente.');
