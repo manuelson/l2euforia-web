@@ -129,7 +129,7 @@ class AuthController extends Controller
         try {
             $this->validate(
                 $request,
-                ['email' => 'required|email']
+                ['username' => 'required']
             );
 
             $data = $request->all();
@@ -137,7 +137,7 @@ class AuthController extends Controller
             $response = $this->connection->execute(
                 'api/exist-user',
                 [
-                    'email' => $data['email'],
+                    'username' => $data['username'],
                 ]
             );
 
@@ -145,7 +145,7 @@ class AuthController extends Controller
                 return redirect()->back()->withErrors($response['message']);
             }
 
-            $this->sendForgotpasswordEmail->send($data['email'], $response['message']['fp_token']);
+            $this->sendForgotpasswordEmail->send($response['message']['email'], $response['message']['fp_token']);
 
             return redirect()->back()->with('success', 'Se ha enviado un correo electronico.');
         } catch (\Exception $e) {
