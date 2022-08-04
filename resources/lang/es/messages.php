@@ -18,7 +18,7 @@ return [
     'icon_1' => 'Doble box por usuario',
     'icon_2' => 'Buffers low level',
     'icon_3' => 'No hay beneficios para los donadores',
-    'icon_4' => 'Aprendizaje auto class por NPC',
+    'icon_4' => 'Aprendizaje class por NPC y autoSkills',
     'auth' => 'Autentifícate',
     'email' => 'email',
     'password' => 'contraseña',
