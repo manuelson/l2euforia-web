@@ -83,7 +83,7 @@ class AuthController extends Controller
         $request->session()->remove('access_token');
         $request->session()->remove('email');
 
-        return redirect("")->withSuccess('Te has deslogueado correctamente.');
+        return redirect("")->withSuccess('Logout correctly.');
     }
 
 
@@ -117,7 +117,7 @@ class AuthController extends Controller
             $request->session()->put('username', $request->username);
         }
 
-        return redirect("")->withSuccess('Logueado correctamente.');
+        return redirect("")->withSuccess('Log in correctly.');
     }
 
     /**
@@ -147,7 +147,7 @@ class AuthController extends Controller
 
             $this->sendForgotpasswordEmail->send($response['message']['email'], $response['message']['fp_token']);
 
-            return redirect()->back()->with('success', 'Se ha enviado un correo electronico.');
+            return redirect()->back()->with('success', 'An email has been sent.');
         } catch (\Exception $e) {
             return redirect()->back()->withErrors($e->getMessage());
         }
