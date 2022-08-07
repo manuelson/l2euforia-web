@@ -15,7 +15,7 @@ return [
     'version_chronicle' => 'The classic version of the game without modifications. No pay2win, pure enjoyment.',
     'register_now' => 'Register now',
     'download_game' => 'Download game',
-    'icon_1' => 'Double box per user',
+    'icon_1' => 'Four box (client) per user',
     'icon_2' => 'Buffers low level',
     'icon_3' => 'No benefits for those who donate',
     'icon_4' => 'Class learned by NPC and autoSkills',
