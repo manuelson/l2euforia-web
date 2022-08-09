@@ -49,10 +49,11 @@ return [
     'donate_4' => 'Cambiar nombre del personaje',
     "donate_notfound" => 'En estos momentos no tenemos linkado el paypal en el proyecto. Pero si quieres, nos puedes donar a cambio de las recompensas ya descritas arriba. Si es asi por favor contacta con nosotros a via email <strong>info@l2euforia.com</strong> con la cantidad que quieres aportar y tu recompensa.',
     "footer_copyright" => 'Todos los derechos reservados',
-    "token_gk" => 'Los tokens son intercambiables en un NPC por cosmeticos. El NPC se encuentra al lado del GateKeeper.',
+    "token_gk" => 'Los tokens son intercambiables en un NPC por cosmeticos, monturas y mas. El NPC se encuentra al lado del GateKeeper.',
     "donate_sex" => 'Cambia el sexo a tu personaje.',
     "download_now" => "Desarga el juego y el parche",
     "download_patch" => "Descarga el parche",
     "download_head" => 'Primero descarga el juego completo en el boton de abajo. Una vez tengas el juego, descarga el parche con el boton de abajo. Cuando obtengas el parche reemplaza el system del parche por el del juego. Una vez reemplazado ejecuta el fichero L2.EXE de la carpeta system',
+    "donate_5" => 'Especifica tu usuario en la donacion y el motivo.'
 
 ];
