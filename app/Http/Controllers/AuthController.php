@@ -219,7 +219,7 @@ class AuthController extends Controller
                 $request,
                 [
                     'l2account' => 'required',
-                    'l2email' => 'required|email',
+                    'l2email' => 'required|email|min:4',
                     'l2password1' => 'required|min:6|required_with:l2password2|same:l2password2',
                     'l2password2' => ''
                 ],
