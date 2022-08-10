@@ -218,7 +218,7 @@ class AuthController extends Controller
             $this->validate(
                 $request,
                 [
-                    'l2account' => 'required|min:4|alpha',
+                    'l2account' => 'required|min:3|alpha',
                     'l2email' => 'required|email',
                     'l2password1' => 'required|min:6|required_with:l2password2|same:l2password2',
                     'l2password2' => ''
