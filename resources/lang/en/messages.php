@@ -53,5 +53,5 @@ return [
     "download_now" => "Download game and patch",
     "download_patch" => "Download patch",
     "download_head" => 'First download the full game on the button below. Once you have the game, download the patch with the button below. When you get the patch replace the patch system with the game system. Once replaced, run the L2.EXE file from the system folder',
-    "donate_5" => 'Specify your username in the donation and the reason.'
+    "donate_5" => 'Send an email to info@l2euforia.com specifying your username in the donation and the reason. Once the payment is verified, the reward will be given (Max 24h)'
 ];
