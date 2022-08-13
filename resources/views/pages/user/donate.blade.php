@@ -27,6 +27,10 @@
                 <strong>10 €</strong>
             </div>
             <div class="package">
+                <strong>{!! trans('messages.donate_6') !!}</strong> <br/><br/>
+                <strong>10 €</strong>
+            </div>
+            <div class="package">
                 <strong>{!! trans('messages.donate_3') !!}</strong> <br/><br/>
                 {!! trans('messages.token_gk') !!}
                 <br/><br/>
@@ -34,7 +38,7 @@
         </div>
         <div class='packages wrapper'>
             <p>
-                {!! trans('messages.donate_5') !!} 
+                {!! trans('messages.donate_5') !!}
             </p>
             <form action="https://www.paypal.com/donate" method="post" target="_top">
                 <input type="hidden" name="business" value="8AWX4UMAZ9T4E" />
