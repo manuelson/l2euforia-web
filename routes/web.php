@@ -21,14 +21,24 @@ use App\Http\Middleware\CustomAuth;
 Route::group(['middleware' => ['web', CustomAuth::class]], function () {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('profile', [CharacterController::class, 'profile'])->name('profile');
-
 });
+
 Route::get('lang/{lang}', [LanguageController::class, 'swap'])->name('lang.swap');
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::get('register', [AuthController::class, 'registration'])->name('register');
 Route::get('download', [AuthController::class, 'download'])->name('download');
+
+
+Route::group(['middleware' => ['web', \App\Http\Middleware\AdminAuth::class]], function () {
+    Route::get('admin_items', [\App\Http\Controllers\AdminController::class, 'items'])->name('admin.items');
+    Route::get('admin_chars', [\App\Http\Controllers\AdminController::class, 'charList'])->name('admin.chars');
+
+});
+
+
+
 
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post');
 Route::get('forgotpassword', [AuthController::class, 'forgotpassword'])->name('forgotpassword');

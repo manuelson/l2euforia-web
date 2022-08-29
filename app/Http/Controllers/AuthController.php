@@ -80,6 +80,7 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         $request->session()->remove('authenticated');
+        $request->session()->remove('is_admin');
         $request->session()->remove('access_token');
         $request->session()->remove('email');
 
@@ -111,6 +112,11 @@ class AuthController extends Controller
         }
 
         if ((bool)$response['error'] === false ) {
+            $request->session()->put('is_admin', false);
+
+            if($response['accessLevel'] == 8) {
+                $request->session()->put('is_admin', true);
+            }
             // Authenticate successful
             $request->session()->put('authenticated', time());
             $request->session()->put('access_token', $response['access_token']);
