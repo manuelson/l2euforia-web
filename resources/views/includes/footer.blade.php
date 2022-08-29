@@ -4,7 +4,7 @@
             Lineage2 Euforia - v 1.0.2
     </div>
     <div class="rights">
-        ©Copyright. {!! trans('messages.footer_copyright') !!} 2022. Make with love
+        ©Copyright. {!! trans('messages.footer_copyright') !!} 2022. Make with love. <a href="http://l2euforia.test/vote-us">Vote us</a>
         <br/>Contact: <a href="mailto:info@l2euforia.com">info@l2euforia.com</a>
     </div>
 </div>
