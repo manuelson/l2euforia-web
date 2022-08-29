@@ -47,6 +47,7 @@ Route::get('recoveryPassword', [AuthController::class, 'recoveryPassword'])->nam
 Route::post('post-recoverypassword', [AuthController::class, 'postRecoveryPassword'])->name('postRecoveryPassword.post');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post');
 Route::get('donate', [CharacterController::class, 'donate'])->name('donate');
+Route::get('vote-us', [AuthController::class, 'vote'])->name('vote');
 Route::get('news/getlist', [NewsController::class, 'getlist'])->name('news.getlist');
 
 

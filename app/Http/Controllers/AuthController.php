@@ -264,4 +264,10 @@ class AuthController extends Controller
         }
     }
 
+    public function vote()
+    {
+        return view('pages.user.voteus');
+
+    }
+
 }
