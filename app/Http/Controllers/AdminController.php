@@ -56,7 +56,7 @@ class AdminController extends Controller
         if (isset($response['message'])) {
             $data =  $response['message'];
             foreach ($data as $item) {
-                if ($result = $this->getItemDataById($item['item_id'])) {
+                if ($result = $this->getItemDataById($item['item_id'], $item['count'])) {
                     $items[] = $result;
                 }
             }
@@ -80,7 +80,7 @@ class AdminController extends Controller
         return view('pages.admin.chars')->with('chars', $response);
     }
 
-    private function getItemDataById(int $searchId)
+    private function getItemDataById(int $searchId, $count)
     {
         $xml = simplexml_load_file(resource_path().'/items/items.xml');
         $item = $xml->xpath("/items/item[@id='".$searchId."']");
@@ -94,7 +94,8 @@ class AdminController extends Controller
             return [
                 'item' => [
                     'id' => (string)$item[0]->attributes()->id[0],
-                    'name' => $name
+                    'name' => $name,
+                    'qty' => $count
                 ],
                 'grade' => $grade,
                 'icon' => $icon
