@@ -88,6 +88,8 @@ class AdminController extends Controller
             $grade = (string)$item[0]->xpath('grade')[0];
             $name = (string)$item[0]->xpath('name')[0];
             $icon = (string)$item[0]->xpath('icon')[0];
+            $bodypart = (string)$item[0]->xpath('bodypart')[0];
+            $type = (string)$item[0]->xpath('type')[0];
             $icon =  str_replace('icon.', '', $icon);
             $icon =  str_replace('BranchSys2.', '', $icon);
 
@@ -96,7 +98,9 @@ class AdminController extends Controller
                     'id' => (string)$item[0]->attributes()->id[0],
                     'name' => $name,
                     'qty' => $count,
-                    'enchant' => $enchant
+                    'enchant' => $enchant,
+                    'type' => $type,
+                    'bodypart' => $bodypart
                 ],
                 'grade' => $grade,
                 'icon' => $icon
