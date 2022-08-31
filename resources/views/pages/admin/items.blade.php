@@ -1,11 +1,9 @@
-
-
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>L2Euforia admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
@@ -30,7 +28,7 @@
             <a href="admin_items?page=1&{{ app('request')->input('name') }}&owner_id={{ app('request')->input('owner_id') }}&type=WAREHOUSE" class="nav-link">Show Warehouse</a>
         </li>
     </ul>
-    
+
     <div class="my-3 p-3 bg-white rounded shadow-sm">
         <h6 class="border-bottom border-gray pb-2 mb-0">{{ app('request')->input('name') }} Items view</h6>
 
