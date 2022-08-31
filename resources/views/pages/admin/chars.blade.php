@@ -7,7 +7,7 @@
 
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">{{$item['char_name']}}}</h5>
+            <h5 class="card-title">{{$item['char_name']}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">Lvl.{{$item['level']}}</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="admin_items?page=1&owner_id={{$item['charId']}}&type=INVENTORY" class="card-link">Show inventory</a>
@@ -18,3 +18,29 @@
 
 
 @endforeach
+
+<style>
+    body{
+        margin: 5px 0;
+    }
+
+    .card{
+        border-radius: 8px;
+        border: 1px solid #cccccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        transition: all linear 200ms;
+    }
+    .card:hover{
+        transform: scale(1.1);
+        transition: all linear 200ms;
+        z-index: 1;
+        box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+        cursor: pointer;
+    }
+</style>
