@@ -14,9 +14,9 @@
 
 <a href="admin_chars" class="card-link">Go back</a><br/>
 <br><br>
-<a href="admin_items?page=1&owner_id={{ app('request')->input('owner_id') }}&type=INVENTORY" class="card-link">Show inventory</a><br/>
-<a href="admin_items?page=1&owner_id={{ app('request')->input('owner_id') }}&type=PAPERDOLL" class="card-link">Show Equipped</a><br/>
-<a href="admin_items?page=1&owner_id={{ app('request')->input('owner_id') }}&type=WAREHOUSE" class="card-link">Show Warehouse</a>
+<a href="admin_items?page=1&name={{ app('request')->input('name') }}&owner_id={{ app('request')->input('owner_id') }}&type=INVENTORY" class="card-link">Show inventory</a><br/>
+<a href="admin_items?page=1&{{ app('request')->input('name') }}&owner_id={{ app('request')->input('owner_id') }}&type=PAPERDOLL" class="card-link">Show Equipped</a><br/>
+<a href="admin_items?page=1&{{ app('request')->input('name') }}&owner_id={{ app('request')->input('owner_id') }}&type=WAREHOUSE" class="card-link">Show Warehouse</a>
 
 <main role="main" class="container">
 
