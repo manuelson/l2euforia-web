@@ -82,7 +82,7 @@ class AdminController extends Controller
 
     private function getItemDataById(int $searchId)
     {
-        $xml = simplexml_load_file('items.xml');
+        $xml = simplexml_load_file(resource_path().'/items.xml');
         $item = $xml->xpath("/items/item[@id='".$searchId."']");
         if (count($item) > 0) {
             $grade = (string)$item[0]->xpath('grade')[0];
