@@ -5,7 +5,7 @@
 @foreach ($chars['message'] ?? '' as $item)
 
 
-    <div class="card" style="width: 18rem;">
+    <div class="m-2 card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{$item['char_name']}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">Lvl.{{$item['level']}}</h6>
