@@ -28,7 +28,7 @@
             <div class="media text-muted pt-3">
                 <img src="img/icons/{{$item['icon']}}.png" alt="32x32" class="mr-2 rounded" style="width: 32px; height: 32px;" data-holder-rendered="true">
                 <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" style="padding-left:10px">
-                    <strong class="d-block text-gray-dark">{{$item['item']['name']}} - x{{$item['item']['enchant']}} - (<span style="color:#AD381E">{{$item['grade']}}</span>)<span style="float:right">{{$item['item']['qty']}}</span></strong>
+                    <strong class="d-block text-gray-dark">{{$item['item']['name']}} (+{{$item['item']['enchant']}}) - (<span style="color:#AD381E">{{$item['grade']}}</span>)<span style="float:right">{{$item['item']['qty']}}</span></strong>
                 </p>
             </div>
         @endforeach
