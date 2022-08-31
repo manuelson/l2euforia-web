@@ -10,11 +10,19 @@
 </head>
 <body>
 
+
+
+<a href="admin_chars" class="card-link">Go back</a><br/>
+<br><br>
+<a href="admin_items?page=1&owner_id={{ app('request')->input('owner_id') }}&type=INVENTORY" class="card-link">Show inventory</a><br/>
+<a href="admin_items?page=1&owner_id={{ app('request')->input('owner_id') }}&type=PAPERDOLL" class="card-link">Show Equipped</a><br/>
+<a href="admin_items?page=1&owner_id={{ app('request')->input('owner_id') }}&type=WAREHOUSE" class="card-link">Show Warehouse</a>
+
 <main role="main" class="container">
 
 
     <div class="my-3 p-3 bg-white rounded shadow-sm">
-        <h6 class="border-bottom border-gray pb-2 mb-0">Items</h6>
+        <h6 class="border-bottom border-gray pb-2 mb-0">{{ app('request')->input('name') }} Items view</h6>
 
         @foreach ($items ?? '' as $item)
             <div class="media text-muted pt-3">

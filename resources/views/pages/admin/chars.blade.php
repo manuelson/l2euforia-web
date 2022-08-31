@@ -14,9 +14,9 @@
         <div class="card-body">
             <h5 class="card-title">{{$item['char_name']}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">Lvl.{{$item['level']}}</h6>
-            <a href="admin_items?page=1&owner_id={{$item['charId']}}&type=INVENTORY" class="card-link">Show inventory</a><br/>
-            <a href="admin_items?page=1&owner_id={{$item['charId']}}&type=PAPERDOLL" class="card-link">Show Equipped</a><br/>
-            <a href="admin_items?page=1&owner_id={{$item['charId']}}&type=WAREHOUSE" class="card-link">Show Warehouse</a>
+            <a href="admin_items?page=1&name={{$item['char_name']}}&owner_id={{$item['charId']}}&type=INVENTORY" class="card-link">Show inventory</a><br/>
+            <a href="admin_items?page=1&name={{$item['char_name']}}&owner_id={{$item['charId']}}&type=PAPERDOLL" class="card-link">Show Equipped</a><br/>
+            <a href="admin_items?page=1&name={{$item['char_name']}}&owner_id={{$item['charId']}}&type=WAREHOUSE" class="card-link">Show Warehouse</a>
         </div>
     </div>
 @endforeach
