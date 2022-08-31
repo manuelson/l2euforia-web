@@ -82,35 +82,23 @@ class AdminController extends Controller
 
     private function getItemDataById(int $searchId)
     {
-        $xmls = glob(resource_path().'/items/*.{xml}', GLOB_BRACE);
-        $result = [];
-        $gradeSearch = "crystal_type";
+        $xml = simplexml_load_file('items.xml');
+        $item = $xml->xpath("/items/item[@id='".$searchId."']");
+        if (count($item) > 0) {
+            $grade = (string)$item[0]->xpath('grade')[0];
+            $name = (string)$item[0]->xpath('name')[0];
+            $icon = (string)$item[0]->xpath('icon')[0];
+            $icon =  str_replace('icon.', '', $icon);
+            $icon =  str_replace('BranchSys2.', '', $icon);
 
-        foreach ($xmls as $xml) {
-            $xml = simplexml_load_file($xml);
-            $item = $xml->xpath('item[@id="'.$searchId.'"]');
-
-            if (count($item) > 0) {
-                $type = $item[0]->xpath('set[@name="'.$gradeSearch.'"]');
-                $icon = $item[0]->xpath('set[@name="icon"]');
-                $icon =  str_replace('icon.', '', $icon[0]['val'][0]);
-                $icon =  str_replace('BranchSys2.', '', $icon);
-
-                $grade =  'No-grade';
-                if (isset($type[0]['val'][0])) {
-                   $grade = $type[0]['val'][0];
-                }
-
-                return [
-                    'item' => [
-                        'id' => (string)$item[0]->attributes()->id[0],
-                        'name' => (string)$item[0]->attributes()->name[0]
-                    ],
-                    'grade' => $grade,
-                    'icon' => $icon
-                ];
-                break;
-            }
+            return [
+                'item' => [
+                    'id' => (string)$item[0]->attributes()->id[0],
+                    'name' => $name
+                ],
+                'grade' => $grade,
+                'icon' => $icon
+            ];
         }
     }
 }
