@@ -12,15 +12,25 @@
 
 
 
-<a href="admin_chars" class="card-link">Go back</a><br/>
 <br><br>
-<a href="admin_items?page=1&name={{ app('request')->input('name') }}&owner_id={{ app('request')->input('owner_id') }}&type=INVENTORY" class="card-link">Show inventory</a><br/>
-<a href="admin_items?page=1&{{ app('request')->input('name') }}&owner_id={{ app('request')->input('owner_id') }}&type=PAPERDOLL" class="card-link">Show Equipped</a><br/>
-<a href="admin_items?page=1&{{ app('request')->input('name') }}&owner_id={{ app('request')->input('owner_id') }}&type=WAREHOUSE" class="card-link">Show Warehouse</a>
 
 <main role="main" class="container">
 
-
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="admin_chars" class="nav-link"><< Go back</a>
+        </li>
+        <li class="nav-item">
+            <a href="admin_items?page=1&name={{ app('request')->input('name') }}&owner_id={{ app('request')->input('owner_id') }}&type=INVENTORY" class="nav-link">Show inventory</a><br/>
+        </li>
+        <li class="nav-item">
+            <a href="admin_items?page=1&{{ app('request')->input('name') }}&owner_id={{ app('request')->input('owner_id') }}&type=PAPERDOLL" class="nav-link">Show Equipped</a><br/>
+        </li>
+        <li class="nav-item">
+            <a href="admin_items?page=1&{{ app('request')->input('name') }}&owner_id={{ app('request')->input('owner_id') }}&type=WAREHOUSE" class="nav-link">Show Warehouse</a>
+        </li>
+    </ul>
+    
     <div class="my-3 p-3 bg-white rounded shadow-sm">
         <h6 class="border-bottom border-gray pb-2 mb-0">{{ app('request')->input('name') }} Items view</h6>
 
