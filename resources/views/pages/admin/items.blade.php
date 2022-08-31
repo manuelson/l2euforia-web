@@ -30,28 +30,47 @@
     </ul>
 
     <div class="my-3 p-3 bg-white rounded shadow-sm">
-        <h6 class="border-bottom border-gray pb-2 mb-0">{{ app('request')->input('name') }} Items view</h6>
+        <h6 class="border-bottom border-gray pb-2 mb-0">{{ app('request')->input('name') }} Weapons view</h6>
 
         @foreach ($items ?? '' as $item)
-
-            <div class="media text-muted pt-3">
-                <img src="img/icons/{{$item['icon']}}.png" alt="32x32" class="mr-2 rounded" style="width: 32px; height: 32px;" data-holder-rendered="true">
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" style="padding-left:10px">
-                    @if($item['item']['type'] == 'Weapon' || $item['item']['type'] == 'Armor')
+            @if($item['item']['type'] == 'Weapon')
+                <div class="media text-muted pt-3">
+                    <img src="img/icons/{{$item['icon']}}.png" alt="32x32" class="mr-2 rounded" style="width: 32px; height: 32px;" data-holder-rendered="true">
+                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" style="padding-left:10px">
                         <strong class="d-block text-gray-dark">{{$item['item']['name']}} (+{{$item['item']['enchant']}}) - (<span style="color:#AD381E">{{$item['grade']}}</span>)<span style="float:right">{{$item['item']['qty']}}</span></strong>
-                    @else
-                        @if($item['item']['type'] == 'EtcItem')
-                            <strong class="d-block text-gray-dark">{{$item['item']['name']}} <span style="float:right">{{$item['item']['qty']}}</span></strong>
-                        @else
-                            <strong class="d-block text-gray-dark">{{$item['item']['name']}} (+{{$item['item']['enchant']}}) - (<span style="color:#AD381E">{{$item['grade']}}</span>)<span style="float:right">{{$item['item']['qty']}}</span></strong>
-                       @endif
-                    @endif
-                </p>
-            </div>
+                    </p>
+                </div>
+            @endif
         @endforeach
+    </div>
 
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h6 class="border-bottom border-gray pb-2 mb-0">{{ app('request')->input('name') }} Armor view</h6>
+        @foreach ($items ?? '' as $item)
+            @if($item['item']['type'] == 'Armor')
+                <div class="media text-muted pt-3">
+                    <img src="img/icons/{{$item['icon']}}.png" alt="32x32" class="mr-2 rounded" style="width: 32px; height: 32px;" data-holder-rendered="true">
+                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" style="padding-left:10px">
+                        <strong class="d-block text-gray-dark">{{$item['item']['name']}} (+{{$item['item']['enchant']}}) - (<span style="color:#AD381E">{{$item['grade']}}</span>)<span style="float:right">{{$item['item']['qty']}}</span></strong>
+                    </p>
+                </div>
+            @endif
+        @endforeach
+    </div>
 
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h6 class="border-bottom border-gray pb-2 mb-0">{{ app('request')->input('name') }} Etc items view</h6>
 
+        @foreach ($items ?? '' as $item)
+            @if($item['item']['type'] == 'EtcItem')
+                <div class="media text-muted pt-3">
+                    <img src="img/icons/{{$item['icon']}}.png" alt="32x32" class="mr-2 rounded" style="width: 32px; height: 32px;" data-holder-rendered="true">
+                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray" style="padding-left:10px">
+                        <strong class="d-block text-gray-dark">{{$item['item']['name']}} <span style="float:right">{{$item['item']['qty']}}</span></strong>
+                    </p>
+                </div>
+            @endif
+        @endforeach
     </div>
 
 </main>
