@@ -10,10 +10,11 @@
 <div class="content">
 <div class="row">
 @foreach ($chars['message'] ?? '' as $item)
-    <div class="card" style="width: 15rem;">
+
+    <div class="card" style="width: 15rem; @if($item['accesslevel'] == 8) background:#AD9A1E;color:white !important @endif">
         <div class="card-body">
             <h5 class="card-title">{{$item['char_name']}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Lvl.{{$item['level']}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted" style="@if($item['accesslevel'] == 8) color:white !important @endif">@if($item['accesslevel'] == 8) GameMaster - @endif Lvl.{{$item['level']}}</h6>
             <a href="admin_items?page=1&name={{$item['char_name']}}&owner_id={{$item['charId']}}&type=INVENTORY" class="card-link">Show inventory</a><br/>
             <a href="admin_items?page=1&name={{$item['char_name']}}&owner_id={{$item['charId']}}&type=PAPERDOLL" class="card-link">Show Equipped</a><br/>
             <a href="admin_items?page=1&name={{$item['char_name']}}&owner_id={{$item['charId']}}&type=WAREHOUSE" class="card-link">Show Warehouse</a>
