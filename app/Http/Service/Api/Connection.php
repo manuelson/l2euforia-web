@@ -11,15 +11,23 @@ class Connection
     /**
      * @param $endpoint
      * @param array $params
+     * @param string|null $token
      * @param bool $debugger
      * @return array
      */
-    public function execute($endpoint, array $params, bool $debugger = false) : array
-    {
+    public function execute(
+        $endpoint,
+        array $params,
+        string $token = null,
+        bool $debugger = false
+    ) : array {
         try {
             $client = new Client([
                 'base_uri' => env('API_URL'),
-                'headers' => ['Content-Type' => 'application/json'],
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                    'Authorization' => 'Bearer '.$token
+                ],
                 'http_errors' => false
             ]);
 
