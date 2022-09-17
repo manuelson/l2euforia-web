@@ -3,6 +3,7 @@
 @section('content')
     <section class="donate">
         <h2 class="sectionTitle">Your characters</h2>
+        <h3 class="sectionTitle">Account: {{session()->get('username')}}</h3>
         @include('includes.messages')
         <div class='wrapper wrappFlex'>
             @foreach ($chars['message'] ?? '' as $item)
