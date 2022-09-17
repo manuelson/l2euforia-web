@@ -22,6 +22,7 @@
         <div class="card-body">
             <h5 class="card-title">{{$item['char_name']}}</h5>
             <h6 class="card-subtitle mb-2 text-muted" style="@if($item['accesslevel'] == 8) color:white !important @endif">@if($item['accesslevel'] == 8) GameMaster - @endif Lvl.{{$item['level']}}</h6>
+            <h7 class="card-title">Last access: {{date('m/d/Y H:i:s', $item['lastAccess'])}}</h7><br/>
             <a href="admin_items?page=1&name={{$item['char_name']}}&owner_id={{$item['charId']}}&type=INVENTORY" class="card-link">Show inventory</a><br/>
             <a href="admin_items?page=1&name={{$item['char_name']}}&owner_id={{$item['charId']}}&type=PAPERDOLL" class="card-link">Show Equipped</a><br/>
             <a href="admin_items?page=1&name={{$item['char_name']}}&owner_id={{$item['charId']}}&type=WAREHOUSE" class="card-link">Show Warehouse</a>
