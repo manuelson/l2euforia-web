@@ -8,6 +8,9 @@
                 <li><a href="/download">{!! trans('messages.downloads') !!}</a></li>
                 <li><a href="/vote-us" style="color:#e4c571"><strong>{!! trans('messages.vote') !!}</a></strong></li>
                 <li><a href="/">{!! trans('messages.contact') !!}</a></li>
+                @if(session()->get('authenticated') && session()->get('is_admin'))
+                    <li><a href="/admin_chars">Admin char list</a></li>
+                @endif
             @if(! session()->get('authenticated'))
                 <li class="show-smartphone"><a href="/login">{!! trans('messages.login') !!}</a></li>
                 <li class="show-smartphone"><a href="/register">{!! trans('messages.register') !!}</a></li>
