@@ -9,6 +9,13 @@
 <body>
 <div class="content">
 <div class="row">
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="/" class="nav-link"><< Go website</a>
+        </li>
+    </ul>
+
 @foreach ($chars['message'] ?? '' as $item)
 
     <div class="card" style="width: 15rem; @if($item['accesslevel'] == 8) background:#AD9A1E;color:white !important @endif">
