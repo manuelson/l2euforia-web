@@ -74,7 +74,8 @@ class AdminController extends Controller
     {
         $response = $this->connection->execute(
             'api/characters-list',
-            []
+            [],
+            $request->session()->get('access_token')
         );
 
         foreach ($response['message'] as $idx => $item) {
