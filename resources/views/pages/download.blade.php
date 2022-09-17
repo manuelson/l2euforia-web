@@ -10,6 +10,9 @@
             </p>
 
         </div>
+        <br/> <br/>
+        <div style="text-align: center;font-size:50px;color:red"><strong>Zip password: euforia</strong></div>
+
         <div class='packages'>
             <a href="https://drive.google.com/file/d/1jLTCrfsxZyECEojccV60Iya4L_s_UGwk/view?usp=sharing" class='button-alt uppercase'>{!! trans('messages.download_game') !!}</a>
             <span style="width:20px"></span>
