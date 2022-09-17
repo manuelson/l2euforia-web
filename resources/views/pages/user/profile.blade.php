@@ -15,7 +15,7 @@
                             {!! trans('messages.char_lvl') !!} <strong>{{$item['level']}}</strong>
                         </div>
                         <div>
-                            {!! trans('messages.char_access') !!} <strong>{{$item['level']}}</strong>
+                            {!! trans('messages.char_access') !!} <strong>{{$item['lastAccess']}}</strong>
                         </div>
                         <div>
                             {!! trans('messages.char_class') !!} <strong>{{$item['classid']}}</strong>
