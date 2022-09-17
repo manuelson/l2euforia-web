@@ -2,35 +2,35 @@
 
 @section('content')
     <section class="donate">
-        <h2 class="sectionTitle">Your characters</h2>
-        <h3 class="sectionTitle">Account: {{session()->get('username')}}</h3>
+        <h2 class="sectionTitle">{!! trans('messages.title_characters') !!}</h2>
+        <h3 class="sectionTitle">{!! trans('messages.subtitle_characters') !!} {{session()->get('username')}}</h3>
         @include('includes.messages')
         <div class='wrapper wrappFlex'>
             @foreach ($chars['message'] ?? '' as $item)
                 <div class="characterProfile">
                         <div class="">
-                            Char name: <strong>{{$item['char_name']}}</strong>
+                            {!! trans('messages.char_name') !!} <strong>{{$item['char_name']}}</strong>
                         </div>
                         <div>
-                            Char lvl: <strong>{{$item['level']}}</strong>
+                            {!! trans('messages.char_lvl') !!} <strong>{{$item['level']}}</strong>
                         </div>
                         <div>
-                            Class: <strong>{{$item['classid']}}</strong>
+                            {!! trans('messages.char_class') !!} <strong>{{$item['classid']}}</strong>
                         </div>
                         <div>
-                            Sp: <strong>{{$item['sp']}}</strong>
+                            {!! trans('messages.char_sp') !!} <strong>{{$item['sp']}}</strong>
                         </div>
                         <div>
-                            Nobless: <strong>{{$item['nobless']}}</strong>
+                            {!! trans('messages.char_nobless') !!} <strong>{{$item['nobless']}}</strong>
                         </div>
                         <div>
-                            Pvp: <strong>{{$item['pvpkills']}}</strong>
+                            {!! trans('messages.char_pvp') !!} <strong>{{$item['pvpkills']}}</strong>
                         </div>
                         <div>
-                            Pk: <strong>{{$item['pkkills']}}</strong>
+                            {!! trans('messages.char_pk') !!} <strong>{{$item['pkkills']}}</strong>
                         </div>
                         <div>
-                            karma: <strong>{{$item['karma']}}</strong>
+                            {!! trans('messages.char_karma') !!} <strong>{{$item['karma']}}</strong>
                         </div>
                 </div>
             @endforeach

@@ -57,5 +57,16 @@ return [
     "donate_6" => "Up clan level 5",
     "vote" => "vote us",
     "vote_message" => "Remember that voting has a reward. To get your first you must first vote on these banners. Once the voting is done, you can use the command .getreward (within the game) to obtain your reward. <br/>
-The reward is 1 Apiga every 12 hours. The Apiga can be exchanged at an NPC (near the GK) called Exchange Donator."
+The reward is 1 Apiga every 12 hours. The Apiga can be exchanged at an NPC (near the GK) called Exchange Donator.",
+    "title_characters" => 'Your characters',
+    'subtitle_characters' => 'Account:',
+    'char_name' => 'Name:',
+    'char_lvl' => 'Level:',
+    'char_sp' => 'Sp:',
+    'char_class' => 'Class:',
+    'char_nobless' => 'Is nobles:',
+    'char_pvp' => 'Pvp kills:',
+    'char_pk' => 'Pk kills:',
+    'char_karma' => 'Karma:',
+
 ];
