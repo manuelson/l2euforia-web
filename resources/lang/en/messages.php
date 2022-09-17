@@ -68,5 +68,7 @@ The reward is 1 Apiga every 12 hours. The Apiga can be exchanged at an NPC (near
     'char_pvp' => 'Pvp kills:',
     'char_pk' => 'Pk kills:',
     'char_karma' => 'Karma:',
+    'yes' => 'yes',
+    'no' => 'no'
 
 ];

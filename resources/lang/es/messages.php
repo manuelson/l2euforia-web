@@ -66,5 +66,7 @@ return [
     'char_pvp' => 'Pvp kills:',
     'char_pk' => 'Pk kills:',
     'char_karma' => 'Karma:',
+    'yes' => 'si',
+    'no' => 'no'
 
 ];
