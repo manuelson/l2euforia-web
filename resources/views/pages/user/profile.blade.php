@@ -18,6 +18,9 @@
                             Class: <strong>{{$item['classid']}}</strong>
                         </div>
                         <div>
+                            Sp: <strong>{{$item['sp']}}</strong>
+                        </div>
+                        <div>
                             Nobless: <strong>{{$item['nobless']}}</strong>
                         </div>
                         <div>
@@ -28,9 +31,6 @@
                         </div>
                         <div>
                             karma: <strong>{{$item['karma']}}</strong>
-                        </div>
-                        <div>
-                            Sp: <strong>{{$item['sp']}}</strong>
                         </div>
                 </div>
             @endforeach
