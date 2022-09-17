@@ -168,7 +168,11 @@ class CharacterController extends Controller
                         if ($response['message']['tokens'] < 10) {
                             return redirect()->back()->withErrors('You have no available tokens in inventory. Need 10 tokens');
                         }
-                        $this->addNobless($request->userId, $request->session()->get('access_token'));
+                        $this->addNobless(
+                            $request->userId,
+                            $request->session()->get('username'),
+                            $request->session()->get('access_token'),
+                        );
                         return redirect()->back()->with('success', 'Nobless adding successfull');
                         break;
                     case 'name':
@@ -194,6 +198,32 @@ class CharacterController extends Controller
             return redirect()->back()->withErrors('You have no available tokens in inventory');
         } catch (\Exception $e) {
             return redirect()->back()->withErrors('Error on page');
+        }
+    }
+
+    private function addNobless(int $userId,string $username, string $token) :bool
+    {
+        try {
+            $response = $this->connection->execute(
+                'api/addNobless',
+                [
+                    'userId' => $userId,
+                    'username' => $username
+                ],
+                $token
+            );
+
+            if ((bool)$response['error'] === true) {
+                throw new \Exception();
+            }
+
+            if (isset($response['message'])) {
+                return true;
+            }
+
+            return false;
+        } catch (\Exception $e) {
+            return false;
         }
     }
 
