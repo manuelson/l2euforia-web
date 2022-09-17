@@ -16,7 +16,7 @@
             <a href="https://drive.google.com/file/d/1k64tv0MxopI63fjliV6wNN9qjw5jAY-N/view?usp=sharing" class='button-alt uppercase'>{!! trans('messages.download_patch') !!}</a>
         </div>
         <br><br/>
-        <div style="text-align: center;font-size:26px"><strong>Zip password: euforia</strong></div>
+        <div style="text-align: center;font-size:50px;color:red"><strong>Zip password: euforia</strong></div>
 
 
     </section>
