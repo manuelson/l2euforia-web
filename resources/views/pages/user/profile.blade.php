@@ -21,6 +21,15 @@
                             Nobless: <strong>{{$item['nobless']}}</strong>
                         </div>
                         <div>
+                            Pvp: <strong>{{$item['pvpkills']}}</strong>
+                        </div>
+                        <div>
+                            Pk: <strong>{{$item['pkkills']}}</strong>
+                        </div>
+                        <div>
+                            karma: <strong>{{$item['karma']}}</strong>
+                        </div>
+                        <div>
                             Sp: <strong>{{$item['sp']}}</strong>
                         </div>
                 </div>
