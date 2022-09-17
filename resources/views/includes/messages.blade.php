@@ -7,6 +7,7 @@
     <div class="alert-messages">
         <div class="error">@foreach ($errors->all() as $error)
                 {{ $error }}<br/>
-            @endforeach<div>
+            @endforeach
+        </div>
     </div>
 @endif

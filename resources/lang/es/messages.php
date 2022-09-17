@@ -71,5 +71,10 @@ return [
     'female' => 'Femenino',
     'male' => 'Masculino',
     'sex' => 'Sexo',
-    'char_access' => 'Ultimo acceso:'
+    'char_access' => 'Ultimo acceso:',
+    'add_nobless' => 'Añadir noble',
+    'change_sex_female' => 'Cambiar sexo Femenino',
+    'change_sex_male' => 'Cambiar a Masculino',
+    'change_name' => 'Cambiar nombre',
+    'premium_actions' => 'Acciones premium (asegurate de estar offline)'
 ];

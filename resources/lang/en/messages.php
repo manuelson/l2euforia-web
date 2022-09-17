@@ -68,12 +68,17 @@ The reward is 1 Apiga every 12 hours. The Apiga can be exchanged at an NPC (near
     'char_pvp' => 'Pvp kills:',
     'char_pk' => 'Pk kills:',
     'char_karma' => 'Karma:',
-    'yes' => 'yes',
-    'no' => 'no',
+    'yes' => 'Yes',
+    'no' => 'No',
     'female' => 'female',
     'male' => 'male',
-    'sex' => 'sex',
-    'char_access' => 'Last access:'
+    'sex' => 'Sex:',
+    'char_access' => 'Last access:',
+    'add_nobless' => 'Add nobless',
+    'change_sex_female' => 'Change sex Famale',
+    'change_sex_male' => 'Change sex Male',
+    'change_name' => 'Change pj name',
+    'premium_actions' => 'Premium actions'
 
 
 ];

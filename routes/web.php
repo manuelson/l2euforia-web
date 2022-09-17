@@ -21,6 +21,9 @@ use App\Http\Middleware\CustomAuth;
 Route::group(['middleware' => ['web', CustomAuth::class]], function () {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('profile', [CharacterController::class, 'profile'])->name('profile');
+    Route::get('premium', [CharacterController::class, 'premium'])->name('premium');
+    Route::get('changeNickname', [CharacterController::class, 'changeNickname'])->name('changeNickname');
+
 });
 
 Route::get('lang/{lang}', [LanguageController::class, 'swap'])->name('lang.swap');

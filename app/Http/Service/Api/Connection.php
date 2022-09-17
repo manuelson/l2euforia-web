@@ -36,6 +36,9 @@ class Connection
                 ['body' => json_encode($params)]
             );
 
+            if ($response->getStatusCode() == 401) {
+                throw new \Exception($response->getBody());
+            }
             $code = ['code' => $response->getStatusCode()];
             if ($debugger) {
                 print_r(array_merge(json_decode($response->getBody(), true), $code));

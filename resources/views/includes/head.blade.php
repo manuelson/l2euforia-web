@@ -7,7 +7,7 @@
         L2Euforia | {{ $title }}
     @endisset
 </title>
-<link rel="stylesheet" href="{{ asset('css/style.css?v8') }}" />
+<link rel="stylesheet" href="{{ asset('css/style.css?v11') }}" />
 <link rel="stylesheet" href="{{ asset('css/pinchzoomer.min.css') }}" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

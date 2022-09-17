@@ -25,16 +25,21 @@
 }
 
 .characterProfile {
-    width:220px;
+    width:280px;
     background-color:#0D333E;
     border:1px solid #134E5F;
     border-radius: 3px;
     margin-right: 25px;
-    padding: 10px 10px 10px 10px
+    padding: 10px 10px 10px 10px;
+    margin-bottom:10px;
 }
 
 .characterProfile div {
     padding-bottom: 10px;
+}
+
+.characterProfile ul li {
+    padding-bottom: 5px;
 }
 
 section.forgotpassword {
@@ -72,7 +77,7 @@ div.alert-messages {
     font-weight: bold;
 }
 
-.alert-messages div.error{
+div.alert-messages div.error{
     text-effect: engrave;
     color:#8D0707;
     font-weight: bold;
