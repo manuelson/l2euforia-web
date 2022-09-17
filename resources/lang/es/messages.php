@@ -67,6 +67,9 @@ return [
     'char_pk' => 'Pk kills:',
     'char_karma' => 'Karma:',
     'yes' => 'si',
-    'no' => 'no'
+    'no' => 'no',
+    'female' => 'Femenino',
+    'male' => 'Masculino',
+    'sex' => 'Sexo',
 
 ];

@@ -18,6 +18,9 @@
                             {!! trans('messages.char_class') !!} <strong>{{$item['classid']}}</strong>
                         </div>
                         <div>
+                            {!! trans('messages.sex') !!} <strong>{{$item['sex']}}</strong>
+                        </div>
+                        <div>
                             {!! trans('messages.char_sp') !!} <strong>{{$item['sp']}}</strong>
                         </div>
                         <div>
