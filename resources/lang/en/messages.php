@@ -73,6 +73,7 @@ The reward is 1 Apiga every 12 hours. The Apiga can be exchanged at an NPC (near
     'female' => 'female',
     'male' => 'male',
     'sex' => 'sex',
+    'char_access' => 'Last access:'
 
 
 ];

@@ -78,7 +78,6 @@ class AdminController extends Controller
         );
 
         foreach ($response['message'] as $idx => $item) {
-
             $response['message'][$idx]['lastAccess'] = date('d-m-Y H:i:s', (int)$item['lastAccess']/1000);
         }
 

@@ -71,5 +71,5 @@ return [
     'female' => 'Femenino',
     'male' => 'Masculino',
     'sex' => 'Sexo',
-
+    'char_access' => 'Ultimo acceso:'
 ];

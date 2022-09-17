@@ -58,6 +58,7 @@ class CharacterController extends Controller
                     $response['message'][$idx]['classid'] = $this->getItemDataById($chars['classid']);
                     $response['message'][$idx]['sex'] = $chars['sex'] ? trans('messages.female') : trans('messages.male');
                     $response['message'][$idx]['nobless'] = $chars['nobless'] ? trans('messages.yes') : trans('messages.no');
+                    $response['message'][$idx]['lastAccess'] = date('d-m-Y H:i:s', (int)$chars['lastAccess']/1000);
                 }
             }
 
