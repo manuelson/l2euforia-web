@@ -48,7 +48,7 @@
                                <li>This account are online, and premium actions are not allowed</li>
                             @endif
                             <li>
-                                @if($item['nobless'] == 'no' && $item['online'] == '0')
+                                @if($item['nobless'] == 'No' && $item['online'] == '0')
                                     <a href="/premium?type=nobles&userId={{$item['charId']}}"> {!! trans('messages.add_nobless') !!}</a>
                                 @else
                                     <span style="color:grey;text-decoration:line-through">{!! trans('messages.add_nobless') !!}</span>
