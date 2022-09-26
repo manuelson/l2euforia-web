@@ -17,7 +17,6 @@
                 <br/><br/>
                 <strong>5 €</strong>
             </div>
-
             <div class="package">
                 <strong>{!! trans('messages.donate_2') !!}</strong>  <br/><br/>
                 <strong>5 €</strong>
@@ -29,6 +28,10 @@
             <div class="package">
                 <strong>{!! trans('messages.donate_6') !!}</strong> <br/><br/>
                 <strong>10 €</strong>
+            </div>
+            <div class="package">
+                <strong>{!! trans('messages.donate_7') !!}</strong> <br/><br/>
+                <strong>20 € / month</strong>
             </div>
             <div class="package">
                 <strong>{!! trans('messages.donate_3') !!}</strong> <br/><br/>

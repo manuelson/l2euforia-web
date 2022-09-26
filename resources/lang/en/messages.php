@@ -55,6 +55,7 @@ return [
     "download_head" => 'First download the full game on the button below. Once you have the game, download the patch with the button below. When you get the patch replace the patch system with the game system. Once replaced, run the L2.EXE file from the system folder',
     "donate_5" => 'Send an email to info@l2euforia.com specifying your username in the donation and the reason. Once the payment is verified, the reward will be given (Max 24h)',
     "donate_6" => "Up clan level 5",
+    "donate_7" => "Buffer for clanhalls",
     "vote" => "vote us",
     "vote_message" => "Remember that voting has a reward. To get your first you must first vote on these banners. Once the voting is done, you can use the command .getreward (within the game) to obtain your reward. <br/>
 The reward is 1 Apiga every 12 hours. The Apiga can be exchanged at an NPC (near the GK) called Exchange Donator.",

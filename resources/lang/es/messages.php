@@ -56,6 +56,7 @@ return [
     "download_head" => 'Primero descarga el juego completo en el boton de abajo. Una vez tengas el juego, descarga el parche con el boton de abajo. Cuando obtengas el parche reemplaza el system del parche por el del juego. Una vez reemplazado ejecuta el fichero L2.EXE de la carpeta system',
     "donate_5" => 'Envia un correo electronico a info@l2euforia.com especificando tu usuario en la donacion y el motivo. Una vez verificado el pago, sera dado el reward (Max 24h)',
     "donate_6" => "Subir clan level 5",
+    "donate_7" => "Buffer para Clan Halls",
     "title_characters" => 'Tus personajes',
     'subtitle_characters' => 'Cuenta:',
     'char_name' => 'Nombre:',
