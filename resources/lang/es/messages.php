@@ -77,5 +77,6 @@ return [
     'change_sex_female' => 'Cambiar sexo Femenino',
     'change_sex_male' => 'Cambiar a Masculino',
     'change_name' => 'Cambiar nombre',
-    'premium_actions' => 'Acciones premium (asegurate de estar offline)'
+    'premium_actions' => 'Acciones premium (asegurate de estar offline)',
+    'rules' => 'Normas'
 ];

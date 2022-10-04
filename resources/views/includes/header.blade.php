@@ -5,6 +5,7 @@
             <ul>
                 <li><a class="menu" href='/'>{!! trans('messages.home') !!}</a></li>
                 <li><a href='/donate'>{!! trans('messages.donations') !!}</a></li>
+                <li><a href='/rules'>{!! trans('messages.rules') !!}</a></li>
                 <li><a href="/download">{!! trans('messages.downloads') !!}</a></li>
                 <li><a href="/vote-us" style="color:#e4c571"><strong>{!! trans('messages.vote') !!}</a></strong></li>
                 <li><a href="/">{!! trans('messages.contact') !!}</a></li>

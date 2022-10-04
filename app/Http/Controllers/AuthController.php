@@ -77,6 +77,16 @@ class AuthController extends Controller
      *
      * @return response()
      */
+    public function rules()
+    {
+        return view('pages.rules');
+    }
+
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
     public function logout(Request $request)
     {
         $request->session()->remove('authenticated');

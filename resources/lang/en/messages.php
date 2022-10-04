@@ -79,7 +79,8 @@ The reward is 1 Apiga every 12 hours. The Apiga can be exchanged at an NPC (near
     'change_sex_female' => 'Change sex Famale',
     'change_sex_male' => 'Change sex Male',
     'change_name' => 'Change pj name',
-    'premium_actions' => 'Premium actions'
+    'premium_actions' => 'Premium actions',
+    'rules' => 'Rules'
 
 
 ];

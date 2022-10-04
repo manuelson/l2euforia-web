@@ -18,6 +18,9 @@
             <a href="https://l2topzone.com/vote/id/18367"  target="_blank" title="l2topzone" ><img src="https://l2topzone.com/vb/l2topzone-Lineage2-vote-banner-small-1.png" alt="l2topzone.com" border="0"></a>
         </div>
         <div class='packages wrapper'>
+            <a href="https://l2top.co/vote/server/L2Euforia" target="_blank"><img src="https://l2top.co/img/banners/105x48.png" alt="Vote for L2Euforia in L2Top.CO" border="0"></a>
+        </div>
+        <div class='packages wrapper'>
             <a href='https://www.top100arena.com/category/lineage2?vote=99374' title='L2 Euforia'><img src='https://www.top100arena.com/rankbadge/99374' alt='Lineage 2 private server'></a>
         </div>
         <div class='packages wrapper'>
